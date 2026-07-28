@@ -44,7 +44,12 @@ def search(query, top_k=5):
 
     results = cur.fetchall()
 
-    cur.close()
+    for row in results:
+        print("\n====================")
+        print("Ticket Number:", row[0])
+        print("Issue:", row[1][:100] if row[1] else None)
+        print("Resolution:", row[2][:200] if row[2] else None)
+        print("Distance:", row[3])
 
     return results
 

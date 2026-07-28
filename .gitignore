@@ -111,7 +111,6 @@ C:/Users/*/.cache/torch/
 *.ckpt
 *.bin
 *.safetensors
-models/
 
 # ==========================================
 # Generated Outputs
@@ -154,3 +153,4 @@ pip-wheel-metadata/
 .local/
 config.local.py
 settings.local.py
+data/db_export

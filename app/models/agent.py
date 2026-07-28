@@ -97,6 +97,11 @@ class Agent(Base):
         back_populates="agent",
     )
 
+    notifications = relationship(
+    "Notification",
+    back_populates="assigned_agent",
+    )
+
     def __repr__(self):
         return (
             f"<Agent("

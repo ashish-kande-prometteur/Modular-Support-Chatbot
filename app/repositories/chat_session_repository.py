@@ -6,7 +6,7 @@ from app.models.chat_session import (
     ChatSession,
     SessionStatus,
 )
-
+from app.notifications.notification_service import NotificationService
 
 class ChatSessionRepository:
 
@@ -26,14 +26,11 @@ class ChatSessionRepository:
         db: Session,
         session: ChatSession,
         reason: str,
-    ):
+    ) -> ChatSession:
 
         session.status = SessionStatus.ESCALATED_PENDING
-        session.handoff_requested_at = datetime.utcnow()
         session.handoff_reason = reason
-
-        db.commit()
-        db.refresh(session)
+        session.handoff_requested_at = datetime.utcnow()
 
         return session
     

@@ -9,6 +9,7 @@ from app.routes.chat import router as chat_router
 from app.routes.raise_ticket import router as raise_ticket_router
 from app.routes.support_route import router as support_route
 from app.routes.websocket_router import router as websocket_router
+from app.routes.notification_router import router as notification_router
 # -----------------------------
 # Database
 # -----------------------------
@@ -19,6 +20,7 @@ from app.models.chat_session import ChatSession
 from app.models.chat_message import ChatMessage
 from app.models.agent import Agent
 from app.models.ticket_log import TicketLog
+from app.models.notification_model import Notification
 
 # Create chatbot tables (only if they don't already exist)
 Base.metadata.create_all(bind=chatbot_engine)
@@ -61,6 +63,9 @@ app.include_router(
 
 app.include_router(
     websocket_router
+)
+app.include_router(
+    notification_router
 )
 # -----------------------------
 # Demo Page

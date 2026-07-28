@@ -394,8 +394,6 @@ def handle_database_or_ticket(
         confidence=confidence,
     )
 
-print("ticket has created")
-
 
 # ------------------------------------------------------------------
 # RAG helpers

@@ -115,7 +115,11 @@ class ChatSession(Base):
         cascade="all, delete-orphan",
         order_by="ChatMessage.created_at",
     )
-
+    notifications = relationship(
+    "Notification",
+    back_populates="session",
+    cascade="all, delete-orphan",
+    )
     agent = relationship(
         "Agent",
         back_populates="sessions",

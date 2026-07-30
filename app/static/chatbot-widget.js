@@ -38,13 +38,36 @@
   let sessionId = null;
   let externalUserId = localStorage.getItem("chatbot_external_user_id");
 
-  if (!externalUserId) {
-    externalUserId = crypto.randomUUID();
-    localStorage.setItem(
-      "chatbot_external_user_id",
-      externalUserId
+function generateUUID() {
+    if (window.crypto && typeof window.crypto.randomUUID === "function") {
+        return window.crypto.randomUUID();
+    }
+
+    // Fallback for browsers/environments without crypto.randomUUID()
+    return (
+        "user_" +
+        Date.now() +
+        "_" +
+        Math.random().toString(36).substring(2, 10)
     );
-  }
+}
+
+let externalUserId = localStorage.getItem("chatbot_external_user_id");
+
+if (!externalUserId) {
+    externalUserId =
+        window.crypto && typeof window.crypto.randomUUID === "function"
+            ? window.crypto.randomUUID()
+            : "user_" +
+              Date.now() +
+              "_" +
+              Math.random().toString(36).substring(2, 10);
+
+    localStorage.setItem(
+        "chatbot_external_user_id",
+        externalUserId
+    );
+}
   const isLeft = config.position === "bottom-left";
 
   // Live-chat state. agentActive flips true once the backend tells us

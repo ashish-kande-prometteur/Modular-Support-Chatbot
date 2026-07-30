@@ -1,0 +1,2243 @@
+[
+    {
+        "id": 1,
+        "code": "AD",
+        "name": "Andorra",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 2,
+        "code": "AE",
+        "name": "United Arab Emirates",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 3,
+        "code": "AF",
+        "name": "Afghanistan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 4,
+        "code": "AG",
+        "name": "Antigua and Barbuda",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 5,
+        "code": "AI",
+        "name": "Anguilla",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 6,
+        "code": "AL",
+        "name": "Albania",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 7,
+        "code": "AM",
+        "name": "Armenia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 8,
+        "code": "AO",
+        "name": "Angola",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 9,
+        "code": "AQ",
+        "name": "Antarctica",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 10,
+        "code": "AR",
+        "name": "Argentina",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 11,
+        "code": "AS",
+        "name": "American Samoa",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 12,
+        "code": "AT",
+        "name": "Austria",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 13,
+        "code": "AU",
+        "name": "Australia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 14,
+        "code": "AW",
+        "name": "Aruba",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 15,
+        "code": "AX",
+        "name": "Aland Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 16,
+        "code": "AZ",
+        "name": "Azerbaijan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 17,
+        "code": "BA",
+        "name": "Bosnia and Herzegovina",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 18,
+        "code": "BB",
+        "name": "Barbados",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 19,
+        "code": "BD",
+        "name": "Bangladesh",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 20,
+        "code": "BE",
+        "name": "Belgium",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 21,
+        "code": "BF",
+        "name": "Burkina Faso",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 22,
+        "code": "BG",
+        "name": "Bulgaria",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 23,
+        "code": "BH",
+        "name": "Bahrain",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 24,
+        "code": "BI",
+        "name": "Burundi",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 25,
+        "code": "BJ",
+        "name": "Benin",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 26,
+        "code": "BL",
+        "name": "Saint Barthélemy",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 27,
+        "code": "BM",
+        "name": "Bermuda",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 28,
+        "code": "BN",
+        "name": "Brunei Darussalam",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 29,
+        "code": "BO",
+        "name": "Bolivia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 30,
+        "code": "BQ",
+        "name": "Bonaire",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 31,
+        "code": "BR",
+        "name": "Brazil",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 32,
+        "code": "BS",
+        "name": "Bahamas",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 33,
+        "code": "BT",
+        "name": "Bhutan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 34,
+        "code": "BV",
+        "name": "Bouvet Island",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 35,
+        "code": "BW",
+        "name": "Botswana",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 36,
+        "code": "BY",
+        "name": "Belarus",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 37,
+        "code": "BZ",
+        "name": "Belize",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 38,
+        "code": "CA",
+        "name": "Canada",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 39,
+        "code": "CC",
+        "name": "Cocos",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 40,
+        "code": "CD",
+        "name": "Democratic Republic of the Congo",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 41,
+        "code": "CF",
+        "name": "Central African Republic",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 42,
+        "code": "CG",
+        "name": "Congo",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 43,
+        "code": "CH",
+        "name": "Switzerland",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 44,
+        "code": "CI",
+        "name": "Cote D Ivoire",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 45,
+        "code": "CK",
+        "name": "Cook Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 46,
+        "code": "CL",
+        "name": "Chile",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 47,
+        "code": "CM",
+        "name": "Cameroon",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 48,
+        "code": "CN",
+        "name": "China",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 49,
+        "code": "CO",
+        "name": "Colombia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 50,
+        "code": "CR",
+        "name": "Costa Rica",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 51,
+        "code": "CU",
+        "name": "Cuba",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 52,
+        "code": "CV",
+        "name": "Cabo Verde",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 53,
+        "code": "CW",
+        "name": "Curacao",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 54,
+        "code": "CX",
+        "name": "Christmas Island",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 55,
+        "code": "CY",
+        "name": "Cyprus",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 56,
+        "code": "CZ",
+        "name": "Czechia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 57,
+        "code": "DE",
+        "name": "Germany",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 58,
+        "code": "DJ",
+        "name": "Djibouti",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 59,
+        "code": "DK",
+        "name": "Denmark",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 60,
+        "code": "DM",
+        "name": "Dominica",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 61,
+        "code": "DO",
+        "name": "Dominican Republic",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 62,
+        "code": "DZ",
+        "name": "Algeria",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 63,
+        "code": "EC",
+        "name": "Ecuador",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 64,
+        "code": "EE",
+        "name": "Estonia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 65,
+        "code": "EG",
+        "name": "Egypt",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 66,
+        "code": "EH",
+        "name": "Western Sahara",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 67,
+        "code": "ER",
+        "name": "Eritrea",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 68,
+        "code": "ES",
+        "name": "Spain",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 69,
+        "code": "ET",
+        "name": "Ethiopia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 70,
+        "code": "FI",
+        "name": "Finland",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 71,
+        "code": "FJ",
+        "name": "Fiji",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 72,
+        "code": "FK",
+        "name": "Falkland Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 73,
+        "code": "FM",
+        "name": "Federated States of Micronesia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 74,
+        "code": "FO",
+        "name": "Faroe Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 75,
+        "code": "FR",
+        "name": "France",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 76,
+        "code": "GA",
+        "name": "Gabon",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 77,
+        "code": "GB",
+        "name": "United Kingdom of Great Britain and Northern Ireland",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 78,
+        "code": "GD",
+        "name": "Grenada",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 79,
+        "code": "GE",
+        "name": "Georgia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 80,
+        "code": "GF",
+        "name": "French Guiana",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 81,
+        "code": "GG",
+        "name": "Guernsey",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 82,
+        "code": "GH",
+        "name": "Ghana",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 83,
+        "code": "GI",
+        "name": "Gibraltar",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 84,
+        "code": "GL",
+        "name": "Greenland",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 85,
+        "code": "GM",
+        "name": "Gambia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 86,
+        "code": "GN",
+        "name": "Guinea",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 87,
+        "code": "GP",
+        "name": "Guadeloupe",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 88,
+        "code": "GQ",
+        "name": "Equatorial Guinea",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 89,
+        "code": "GR",
+        "name": "Greece",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 90,
+        "code": "GS",
+        "name": "South Georgia and the South Sandwich Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 91,
+        "code": "GT",
+        "name": "Guatemala",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 92,
+        "code": "GU",
+        "name": "Guam",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 93,
+        "code": "GW",
+        "name": "Guinea-Bissau",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 94,
+        "code": "GY",
+        "name": "Guyana",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 95,
+        "code": "HK",
+        "name": "Hong Kong",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 96,
+        "code": "HM",
+        "name": "Heard Island and McDonald Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 97,
+        "code": "HN",
+        "name": "Honduras",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 98,
+        "code": "HR",
+        "name": "Croatia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 99,
+        "code": "HT",
+        "name": "Haiti",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 100,
+        "code": "HU",
+        "name": "Hungary",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 101,
+        "code": "ID",
+        "name": "Indonesia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 102,
+        "code": "IE",
+        "name": "Ireland",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 103,
+        "code": "IL",
+        "name": "Israel",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 104,
+        "code": "IM",
+        "name": "Isle of Man",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 105,
+        "code": "IN",
+        "name": "India",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 106,
+        "code": "IO",
+        "name": "British Indian Ocean Territory",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 107,
+        "code": "IQ",
+        "name": "Iraq",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 108,
+        "code": "IR",
+        "name": "Iran, Islamic Republic of",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 109,
+        "code": "IS",
+        "name": "Iceland",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 110,
+        "code": "IT",
+        "name": "Italy",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 111,
+        "code": "JE",
+        "name": "Jersey",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 112,
+        "code": "JM",
+        "name": "Jamaica",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 113,
+        "code": "JO",
+        "name": "Jordan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 114,
+        "code": "JP",
+        "name": "Japan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 115,
+        "code": "KE",
+        "name": "Kenya",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 116,
+        "code": "KG",
+        "name": "Kyrgyzstan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 117,
+        "code": "KH",
+        "name": "Cambodia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 118,
+        "code": "KI",
+        "name": "Kiribati",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 119,
+        "code": "KM",
+        "name": "Comoros",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 120,
+        "code": "KN",
+        "name": "Saint Kitts and Nevis",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 121,
+        "code": "KP",
+        "name": "Korea, Democratic People's Republic of",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 122,
+        "code": "KR",
+        "name": "Korea, Republic of",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 123,
+        "code": "KW",
+        "name": "Kuwait",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 124,
+        "code": "KY",
+        "name": "Cayman Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 125,
+        "code": "KZ",
+        "name": "Kazakhstan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 126,
+        "code": "LA",
+        "name": "Lao People's Democratic Republic",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 127,
+        "code": "LB",
+        "name": "Lebanon",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 128,
+        "code": "LC",
+        "name": "Saint Lucia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 129,
+        "code": "LI",
+        "name": "Liechtenstein",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 130,
+        "code": "LK",
+        "name": "Sri Lanka",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 131,
+        "code": "LR",
+        "name": "Liberia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 132,
+        "code": "LS",
+        "name": "Lesotho",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 133,
+        "code": "LT",
+        "name": "Lithuania",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 134,
+        "code": "LU",
+        "name": "Luxembourg",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 135,
+        "code": "LV",
+        "name": "Latvia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 136,
+        "code": "LY",
+        "name": "Libya",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 137,
+        "code": "MA",
+        "name": "Morocco",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 138,
+        "code": "MC",
+        "name": "Monaco",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 139,
+        "code": "MD",
+        "name": "Moldova, Republic of",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 140,
+        "code": "ME",
+        "name": "Montenegro",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 141,
+        "code": "MF",
+        "name": "Saint Martin, (French part)",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 142,
+        "code": "MG",
+        "name": "Madagascar",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 143,
+        "code": "MH",
+        "name": "Marshall Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 144,
+        "code": "MK",
+        "name": "North Macedonia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 145,
+        "code": "ML",
+        "name": "Mali",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 146,
+        "code": "MM",
+        "name": "Myanmar",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 147,
+        "code": "MN",
+        "name": "Mongolia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 148,
+        "code": "MO",
+        "name": "Macao",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 149,
+        "code": "MP",
+        "name": "Northern Mariana Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 150,
+        "code": "MQ",
+        "name": "Martinique",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 151,
+        "code": "MR",
+        "name": "Mauritania",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 152,
+        "code": "MS",
+        "name": "Montserrat",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 153,
+        "code": "MT",
+        "name": "Malta",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 154,
+        "code": "MU",
+        "name": "Mauritius",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 155,
+        "code": "MV",
+        "name": "Maldives",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 156,
+        "code": "MW",
+        "name": "Malawi",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 157,
+        "code": "MX",
+        "name": "Mexico",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 158,
+        "code": "MY",
+        "name": "Malaysia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 159,
+        "code": "MZ",
+        "name": "Mozambique",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 160,
+        "code": "NA",
+        "name": "Namibia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 161,
+        "code": "NC",
+        "name": "New Caledonia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 162,
+        "code": "NE",
+        "name": "Niger",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 163,
+        "code": "NF",
+        "name": "Norfolk Island",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 164,
+        "code": "NG",
+        "name": "Nigeria",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 165,
+        "code": "NI",
+        "name": "Nicaragua",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 166,
+        "code": "NL",
+        "name": "Netherlands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 167,
+        "code": "NO",
+        "name": "Norway",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 168,
+        "code": "NP",
+        "name": "Nepal",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 169,
+        "code": "NR",
+        "name": "Nauru",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 170,
+        "code": "NU",
+        "name": "Niue",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 171,
+        "code": "NZ",
+        "name": "New Zealand",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 172,
+        "code": "OM",
+        "name": "Oman",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 173,
+        "code": "PA",
+        "name": "Panama",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 174,
+        "code": "PE",
+        "name": "Peru",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 175,
+        "code": "PF",
+        "name": "French Polynesia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 176,
+        "code": "PG",
+        "name": "Papua New Guinea",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 177,
+        "code": "PH",
+        "name": "Philippines",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 178,
+        "code": "PK",
+        "name": "Pakistan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 179,
+        "code": "PL",
+        "name": "Poland",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 180,
+        "code": "PM",
+        "name": "Saint Pierre and Miquelon",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 181,
+        "code": "PN",
+        "name": "Pitcairn",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 182,
+        "code": "PR",
+        "name": "Puerto Rico",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 183,
+        "code": "PS",
+        "name": "Palestine, State of",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 184,
+        "code": "PT",
+        "name": "Portugal",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 185,
+        "code": "PW",
+        "name": "Palau",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 186,
+        "code": "PY",
+        "name": "Paraguay",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 187,
+        "code": "QA",
+        "name": "Qatar",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 188,
+        "code": "RE",
+        "name": "Réunion",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 189,
+        "code": "RO",
+        "name": "Romania",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 190,
+        "code": "RS",
+        "name": "Serbia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 191,
+        "code": "RU",
+        "name": "Russian Federation",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 192,
+        "code": "RW",
+        "name": "Rwanda",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 193,
+        "code": "SA",
+        "name": "Saudi Arabia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 194,
+        "code": "SB",
+        "name": "Solomon Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 195,
+        "code": "SC",
+        "name": "Seychelles",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 196,
+        "code": "SD",
+        "name": "Sudan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 197,
+        "code": "SE",
+        "name": "Sweden",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 198,
+        "code": "SG",
+        "name": "Singapore",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 199,
+        "code": "SH",
+        "name": "Saint Helena, Ascension and Tristan da Cunha",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 200,
+        "code": "SI",
+        "name": "Slovenia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 201,
+        "code": "SJ",
+        "name": "Svalbard and Jan Mayen",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 202,
+        "code": "SK",
+        "name": "Slovakia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 203,
+        "code": "SL",
+        "name": "Sierra Leone",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 204,
+        "code": "SM",
+        "name": "San Marino",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 205,
+        "code": "SN",
+        "name": "Senegal",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 206,
+        "code": "SO",
+        "name": "Somalia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 207,
+        "code": "SR",
+        "name": "Suriname",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 208,
+        "code": "SS",
+        "name": "South Sudan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 209,
+        "code": "ST",
+        "name": "Sao Tome and Principe",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 210,
+        "code": "SV",
+        "name": "El Salvador",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 211,
+        "code": "SX",
+        "name": "Sint Maarten, (Dutch part)",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 212,
+        "code": "SY",
+        "name": "Syrian Arab Republic",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 213,
+        "code": "SZ",
+        "name": "Eswatini",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 214,
+        "code": "TC",
+        "name": "Turks and Caicos Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 215,
+        "code": "TD",
+        "name": "Chad",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 216,
+        "code": "TF",
+        "name": "French Southern Territories",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 217,
+        "code": "TG",
+        "name": "Togo",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 218,
+        "code": "TH",
+        "name": "Thailand",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 219,
+        "code": "TJ",
+        "name": "Tajikistan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 220,
+        "code": "TK",
+        "name": "Tokelau",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 221,
+        "code": "TL",
+        "name": "Timor-Leste",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 222,
+        "code": "TM",
+        "name": "Turkmenistan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 223,
+        "code": "TN",
+        "name": "Tunisia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 224,
+        "code": "TO",
+        "name": "Tonga",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 225,
+        "code": "TR",
+        "name": "Türkiye",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 226,
+        "code": "TT",
+        "name": "Trinidad and Tobago",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 227,
+        "code": "TV",
+        "name": "Tuvalu",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 228,
+        "code": "TW",
+        "name": "Taiwan, Province of China",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 229,
+        "code": "TZ",
+        "name": "Tanzania, United Republic of",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 230,
+        "code": "UA",
+        "name": "Ukraine",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 231,
+        "code": "UG",
+        "name": "Uganda",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 232,
+        "code": "UM",
+        "name": "United States Minor Outlying Islands",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 233,
+        "code": "US",
+        "name": "United States of America",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 234,
+        "code": "UY",
+        "name": "Uruguay",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 235,
+        "code": "UZ",
+        "name": "Uzbekistan",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 236,
+        "code": "VA",
+        "name": "Holy See",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 237,
+        "code": "VC",
+        "name": "Saint Vincent and the Grenadines",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 238,
+        "code": "VE",
+        "name": "Venezuela, Bolivarian Republic of",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 239,
+        "code": "VG",
+        "name": "Virgin Islands, British",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 240,
+        "code": "VI",
+        "name": "Virgin Islands, U.S.",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 241,
+        "code": "VN",
+        "name": "Viet Nam",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 242,
+        "code": "VU",
+        "name": "Vanuatu",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 243,
+        "code": "WF",
+        "name": "Wallis and Futuna",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 244,
+        "code": "WS",
+        "name": "Samoa",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 245,
+        "code": "YE",
+        "name": "Yemen",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 246,
+        "code": "YT",
+        "name": "Mayotte",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 247,
+        "code": "ZA",
+        "name": "South Africa",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 248,
+        "code": "ZM",
+        "name": "Zambia",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    },
+    {
+        "id": 249,
+        "code": "ZW",
+        "name": "Zimbabwe",
+        "language_id": null,
+        "is_active": true,
+        "created_at": "2025-12-26T13:26:37.766000+05:30",
+        "updated_at": "2025-12-26T13:26:37.766000+05:30"
+    }
+]

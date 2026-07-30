@@ -119,7 +119,7 @@ app/output/*
 !app/output/.gitkeep
 
 # Optional if data files are large
-data/*
+# data/*
 !data/.gitkeep
 
 # ==========================================
@@ -153,4 +153,4 @@ pip-wheel-metadata/
 .local/
 config.local.py
 settings.local.py
-app/data/db_export
+# app/data/db_export

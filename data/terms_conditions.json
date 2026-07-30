@@ -1,0 +1,227 @@
+[
+    {
+        "source": "terms_and_conditions",
+        "section": "Eligibility and Age Restrictions",
+        "topic": "Minimum Age Requirement",
+        "question": "Who is eligible to register and play on Ganare?",
+        "answer": "Players must be at least 18 years old to register an account and participate in gaming activities on Ganare.",
+        "keywords": [
+            "18 years",
+            "minimum age",
+            "legal age",
+            "eligibility"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Eligibility and Age Restrictions",
+        "topic": "Age Confirmation",
+        "question": "What happens when I create an account on Ganare?",
+        "answer": "By registering an account, players confirm that they meet the minimum legal age requirement applicable in their jurisdiction.",
+        "keywords": [
+            "age confirmation",
+            "registration",
+            "legal age"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Eligibility and Age Restrictions",
+        "topic": "Underage Accounts",
+        "question": "What happens if an underage user creates an account?",
+        "answer": "Ganare reserves the right to suspend or terminate any account found to belong to a person under the age of 18.",
+        "keywords": [
+            "underage account",
+            "account suspension",
+            "minor"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Jurisdictional Restrictions",
+        "topic": "Restricted Countries",
+        "question": "Can I use Ganare from any country?",
+        "answer": "Ganare provides its services only in jurisdictions where online gaming is legally permitted.",
+        "keywords": [
+            "country restrictions",
+            "jurisdiction",
+            "legal regions"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Jurisdictional Restrictions",
+        "topic": "Player Responsibility",
+        "question": "Who is responsible for checking whether betting is legal in my country?",
+        "answer": "Players are solely responsible for ensuring that access to and use of the platform is lawful in their country or region.",
+        "keywords": [
+            "legal responsibility",
+            "country laws",
+            "gaming legality"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Jurisdictional Restrictions",
+        "topic": "Blocked Regions",
+        "question": "Can Ganare block access from certain countries?",
+        "answer": "Ganare reserves the right to restrict or terminate access from prohibited jurisdictions without prior notice.",
+        "keywords": [
+            "blocked countries",
+            "restricted regions"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Account Rules",
+        "topic": "Registration Information",
+        "question": "What information do I need to provide during registration?",
+        "answer": "Players must register using accurate and complete information including full legal name, email address, date of birth, and residential address.",
+        "keywords": [
+            "registration details",
+            "KYC",
+            "CDD"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Account Rules",
+        "topic": "Password Requirements",
+        "question": "What are the password requirements for Ganare accounts?",
+        "answer": "Players are required to create a strong password containing uppercase letters, lowercase letters, numbers, and special characters.",
+        "keywords": [
+            "password",
+            "security",
+            "account protection"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Account Rules",
+        "topic": "False Information",
+        "question": "What happens if I provide incorrect information during registration?",
+        "answer": "Providing false or misleading information may result in account suspension or closure.",
+        "keywords": [
+            "false information",
+            "account closure",
+            "account suspension"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Deposits and Withdrawals",
+        "topic": "Payment Methods",
+        "question": "Can I use any payment method for deposits and withdrawals?",
+        "answer": "Deposits and withdrawals may only be made using approved payment methods.",
+        "keywords": [
+            "payment methods",
+            "deposit",
+            "withdrawal"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Deposits and Withdrawals",
+        "topic": "Withdrawal Verification",
+        "question": "Why is my withdrawal request being verified?",
+        "answer": "Withdrawal requests are subject to identity verification, regulatory compliance checks, applicable withdrawal limits, and processing timelines.",
+        "keywords": [
+            "withdrawal verification",
+            "KYC",
+            "compliance"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "AML Compliance",
+        "topic": "AML and CTF",
+        "question": "Does Ganare comply with AML regulations?",
+        "answer": "Ganare complies with all Anti-Money Laundering (AML) and Counter-Terrorist Financing (CTF) regulations.",
+        "keywords": [
+            "AML",
+            "CTF",
+            "compliance"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "AML Compliance",
+        "topic": "Enhanced Due Diligence",
+        "question": "When is Enhanced Due Diligence required?",
+        "answer": "Players must complete Enhanced Due Diligence by submitting a valid government-issued photo ID and recent utility bill upon their first withdrawal request, when cumulative deposits reach USD 10,000, or whenever suspicious activity is detected.",
+        "keywords": [
+            "EDD",
+            "AML",
+            "10,000 USD",
+            "identity verification"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Promotions and Bonuses",
+        "topic": "Bonus Conditions",
+        "question": "Are bonuses subject to conditions?",
+        "answer": "All promotions and bonuses are subject to eligibility requirements, wagering requirements, promotional terms, and expiry dates.",
+        "keywords": [
+            "bonus rules",
+            "promotion terms",
+            "wagering"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Promotions and Bonuses",
+        "topic": "Bonus Withdrawals",
+        "question": "Can I withdraw bonus winnings immediately?",
+        "answer": "Players must satisfy all applicable bonus conditions before promotional winnings become eligible for withdrawal.",
+        "keywords": [
+            "bonus withdrawal",
+            "wagering requirement"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Complaints",
+        "topic": "Complaint Acknowledgement",
+        "question": "How quickly does Ganare respond to complaints?",
+        "answer": "Ganare will acknowledge player complaints within one working day or within seventy-two hours where applicable.",
+        "keywords": [
+            "complaints",
+            "support",
+            "response time"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Complaints",
+        "topic": "Complaint Resolution",
+        "question": "How long does it take to resolve complaints?",
+        "answer": "Ganare aims to investigate and resolve complaints internally within fourteen to thirty calendar days.",
+        "keywords": [
+            "complaint resolution",
+            "support timeline"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Alternative Dispute Resolution",
+        "topic": "ADR",
+        "question": "What happens if my complaint cannot be resolved internally?",
+        "answer": "If a complaint cannot be resolved internally within thirty days, it will be referred to an approved Alternative Dispute Resolution provider.",
+        "keywords": [
+            "ADR",
+            "dispute resolution"
+        ]
+    },
+    {
+        "source": "terms_and_conditions",
+        "section": "Alternative Dispute Resolution",
+        "topic": "ADR Costs",
+        "question": "Who pays for ADR proceedings?",
+        "answer": "All costs associated with ADR proceedings are borne by Ganare and the ADR decision is final and binding.",
+        "keywords": [
+            "ADR costs",
+            "legal disputes"
+        ]
+    }
+]

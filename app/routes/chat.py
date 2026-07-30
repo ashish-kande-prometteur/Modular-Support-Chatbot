@@ -13,6 +13,8 @@ from app.services.session_service import (
 )
 from app.services.message_service import MessageService
 from app.services.conversation_service import ConversationService
+from app.models.chat_session import SessionStatus
+from app.websocket.connection_manager import manager
 
 router = APIRouter()
 
@@ -65,10 +67,32 @@ async def chat(
     # print("==========================================\n")
 
     # Existing AI pipeline
+    if session.status == SessionStatus.HUMAN_ACTIVE:
+
+        await manager.send_to_agent(
+            session_id=str(session.id),
+            message={
+                "type": "message",
+                "sender": "user",
+                "text": request.question,
+            },
+        )
+
+        return {
+            "success": True,
+            "session_id": str(session.id),
+            "live_chat": True,
+        }
+
+
+    # --------------------------------------------------------
+    # Continue AI pipeline
+    # --------------------------------------------------------
+
     answer = get_ai_response(
         db=db,
         session_id=session.id,
-        user_query=request.question
+        user_query=request.question,
     )
 
     message_service.save_ai_message(

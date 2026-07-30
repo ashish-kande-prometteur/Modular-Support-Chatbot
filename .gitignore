@@ -153,4 +153,4 @@ pip-wheel-metadata/
 .local/
 config.local.py
 settings.local.py
-data/db_export
+app/data/db_export

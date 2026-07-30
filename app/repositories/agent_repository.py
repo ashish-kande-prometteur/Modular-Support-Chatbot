@@ -1,5 +1,5 @@
 from app.models.agent import Agent, AgentStatus
-
+from sqlalchemy.orm import Session
 
 class AgentRepository:
 
@@ -49,4 +49,26 @@ class AgentRepository:
             )
             .order_by(Agent.open_session_count.asc())
             .all()
+        )
+
+    @staticmethod
+    def get_by_email(
+        db: Session,
+        email: str,
+    ):
+        return (
+            db.query(Agent)
+            .filter(Agent.email == email)
+            .first()
+        )
+
+    @staticmethod
+    def get_by_id(
+        db: Session,
+        agent_id: str,
+    ):
+        return (
+            db.query(Agent)
+            .filter(Agent.id == agent_id)
+            .first()
         )

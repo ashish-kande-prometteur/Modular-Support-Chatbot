@@ -38,12 +38,18 @@ class Agent(Base):
         nullable=False,
     )
 
-    # Login / notification email
+    # Login email
     email = Column(
         String(255),
         unique=True,
         nullable=False,
         index=True,
+    )
+
+    # Hashed password
+    password_hash = Column(
+        String(255),
+        nullable=False,
     )
 
     # Current availability
@@ -98,8 +104,8 @@ class Agent(Base):
     )
 
     notifications = relationship(
-    "Notification",
-    back_populates="assigned_agent",
+        "Notification",
+        back_populates="assigned_agent",
     )
 
     def __repr__(self):
@@ -107,7 +113,8 @@ class Agent(Base):
             f"<Agent("
             f"id={self.id}, "
             f"name={self.name}, "
-            f"status={self.status}"
+            f"email={self.email}, "
+            f"status={self.status.value}, "
+            f"is_active={self.is_active}"
             f")>"
         )
-    

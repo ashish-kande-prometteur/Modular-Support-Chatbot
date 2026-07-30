@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from app.repositories.support_repository import SupportRepository
 from app.models.chat_session import SessionStatus
 from app.websocket.connection_manager import manager
-
+from app.models.agent import Agent
 
 class WebSocketService:
 
@@ -38,12 +38,13 @@ class WebSocketService:
         # Session must be HUMAN_ACTIVE
         # ----------------------------------------
 
-        if session.status != SessionStatus.HUMAN_ACTIVE:
-            await websocket.close(
-                code=4001,
-                reason="Support session is not active.",
-            )
-            return
+        if participant == "agent":
+            if session.status != SessionStatus.HUMAN_ACTIVE:
+                await websocket.close(
+                    code=4001,
+                    reason="Support session is not active.",
+                )
+                return
 
         # ----------------------------------------
         # Validate User
@@ -102,6 +103,25 @@ class WebSocketService:
             participant_type=participant,
             websocket=websocket,
         )
+
+        # Notify user if an agent joined
+        if participant == "agent":
+
+            agent = (
+                db.query(Agent)
+                .filter(Agent.id == agent_id)
+                .first()
+            )
+
+            if agent:
+                await manager.send_to_user(
+                    session_id=str(session.id),
+                    message={
+                        "type": "system",
+                        "event": "agent_joined",
+                        "agent_name": agent.name,
+                    },
+                )
 
         # ----------------------------------------
         # Keep Connection Alive

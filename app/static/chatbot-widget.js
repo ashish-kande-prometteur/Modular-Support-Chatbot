@@ -47,6 +47,11 @@
   }
   const isLeft = config.position === "bottom-left";
 
+  // Live-chat state. agentActive flips true once the backend tells us
+  // an agent joined this session over the WebSocket below.
+  let liveSocket = null;
+  let agentActive = false;
+
   // ------------------------------------------------------------
   // Shadow DOM host - isolates widget styles from the host page,
   // and isolates the host page's styles from the widget.
@@ -152,6 +157,19 @@
       background: #ececec;
       border-radius: 16px 16px 16px 4px;
     }
+    .msg.agent {
+      background: #d8ecff;
+      border-radius: 16px 16px 16px 4px;
+    }
+    .msg.system {
+      background: none;
+      color: #999;
+      font-size: 12px;
+      font-style: italic;
+      text-align: center;
+      max-width: 100%;
+      margin: 4px 0 14px;
+    }
 
     .feedback-row {
       display: flex;
@@ -201,6 +219,12 @@
         height: 70vh;
       }
     }
+  .sender-name {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #2b6cb0;
+}
   `;
 
   const markup = document.createElement("div");
@@ -215,7 +239,8 @@
       <div class="chat-input">
         <input type="text" placeholder="Type your message..." />
         <button class="send-btn" aria-label="Send">➤</button>
-      </div>
+      </div> 
+         
     </div>
   `;
 
@@ -248,12 +273,21 @@
     if (e.key === "Enter") sendMessage();
   });
 
-  function appendMessage(text, sender) {
-    const el = document.createElement("div");
-    el.className = `msg ${sender}`;
-    el.textContent = text;
-    messagesEl.appendChild(el);
-    messagesEl.scrollTop = messagesEl.scrollHeight;
+  function appendMessage(text, sender, senderName = null) {
+      const el = document.createElement("div");
+      el.className = `msg ${sender}`;
+
+      if (sender === "agent" && senderName) {
+          el.innerHTML = `
+              <div class="sender-name">${senderName}</div>
+              <div>${text}</div>
+          `;
+      } else {
+          el.textContent = text;
+      }
+
+      messagesEl.appendChild(el);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
   function appendFeedbackPrompt(forSessionId) {
@@ -296,12 +330,84 @@
     }
   }
 
+  // ------------------------------------------------------------
+  // Live agent chat (new)
+  // ------------------------------------------------------------
+
+  function connectLiveSocket(sid) {
+
+    if (liveSocket) {
+      liveSocket.close();
+    }
+
+    // Derive ws(s):// from the configured http(s) apiBase.
+    const wsBase = config.apiBase.replace(/^http/, "ws");
+    liveSocket = new WebSocket(
+      `${wsBase}/ws/chat/${sid}?participant=user&external_user_id=${externalUserId}`
+    );
+
+    liveSocket.onmessage = (event) => {
+
+      let data;
+      try {
+        data = JSON.parse(event.data);
+      } catch (err) {
+        return;
+      }
+
+      if (data.type === "system") {
+
+        if (data.event === "agent_joined") {
+          agentActive = true;
+          appendMessage(
+            data.agent_name ? `${data.agent_name} joined the chat` : "An agent joined the chat",
+            "system"
+          );
+        } else if (data.event === "agent_left") {
+          agentActive = false;
+          appendMessage("The agent left. You're back to chatting with our AI.", "system");
+        }
+
+        return;
+      }
+
+      // Don't re-render our own outgoing message if the backend echoes it.
+      if (data.sender === "user") return;
+
+      if (data.sender === "agent") {
+    appendMessage(
+        data.text,
+        "agent",
+        data.agent_name
+    );
+} else {
+    appendMessage(
+        data.text,
+        "bot"
+    );
+}
+    };
+
+    liveSocket.onclose = () => {
+      agentActive = false;
+    };
+  }
+
+  // ------------------------------------------------------------
+
   async function sendMessage() {
     const question = input.value.trim();
     if (!question) return;
 
     appendMessage(question, "user");
     input.value = "";
+
+    // While an agent is live on this session, skip the AI REST call
+    // entirely and send straight over the WebSocket.
+    if (agentActive && liveSocket && liveSocket.readyState === WebSocket.OPEN) {
+      liveSocket.send(JSON.stringify({ type: "message", text: question }));
+      return;
+    }
 
     try {
       const res = await fetch(`${config.apiBase}/api/chat`, {
@@ -318,19 +424,36 @@
 
       const data = await res.json();
 
+      const previousSessionId = sessionId;
       sessionId = data.session_id || sessionId;
+
+      // First time we learn our session_id, open the background socket
+      // that listens for an agent joining.
+      if (sessionId && sessionId !== previousSessionId) {
+        connectLiveSocket(sessionId);
+      }
 
       // Backend may return a flat string ("answer": "...") or the
       // older nested shape ("answer": {answer, confidence, ...}).
       // Handle both so the widget never renders "[object Object]".
-      const answerText =
-        typeof data.answer === "string"
-          ? data.answer
-          : data.answer && typeof data.answer.answer === "string"
-            ? data.answer.answer
-            : "Sorry, I couldn't understand the response.";
+      let answerText = "";
 
-      appendMessage(answerText, "bot");
+      if (typeof data.answer === "string") {
+
+          answerText = data.answer;
+
+      } else if (
+          data.answer &&
+          typeof data.answer.answer === "string"
+      ) {
+
+          answerText = data.answer.answer;
+
+      }
+
+      if (answerText) {
+          appendMessage(answerText, "bot");
+      }
 
       if (data.show_feedback) {
         appendFeedbackPrompt(sessionId);

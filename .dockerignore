@@ -1,0 +1,131 @@
+# -----------------------------
+# Git
+# -----------------------------
+.git
+.gitignore
+.github
+
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# -----------------------------
+# Environment files
+# -----------------------------
+.env
+.env.*
+!.env.example
+
+# -----------------------------
+# IDE
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Logs
+# -----------------------------
+logs/
+*.log
+
+# -----------------------------
+# Local databases
+# -----------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# -----------------------------
+# Docker
+# -----------------------------
+docker-compose.override.yml
+
+# -----------------------------
+# Build artifacts
+# -----------------------------
+build/
+dist/
+*.egg-info/
+
+# -----------------------------
+# Node (if frontend exists)
+# -----------------------------
+node_modules/
+npm-debug.log*
+
+# -----------------------------
+# Hugging Face cache
+# -----------------------------
+.cache/
+huggingface/
+
+# -----------------------------
+# Model files (do not copy local models)
+# -----------------------------
+models/
+model/
+checkpoints/
+weights/
+
+*.bin
+*.pt
+*.pth
+*.onnx
+*.gguf
+*.safetensors
+
+# -----------------------------
+# Jupyter
+# -----------------------------
+.ipynb_checkpoints/
+*.ipynb
+
+# -----------------------------
+# Test files
+# -----------------------------
+tests/
+coverage/
+.coverage
+
+# -----------------------------
+# Local uploads (if generated)
+# -----------------------------
+uploads/
+temp/
+tmp/
+
+# -----------------------------
+# Documentation
+# -----------------------------
+README.md
+docs/
+
+# -----------------------------
+# Local PostgreSQL data
+# -----------------------------
+postgres_data/
+
+# -----------------------------
+# Docker build cache
+# -----------------------------
+.docker/

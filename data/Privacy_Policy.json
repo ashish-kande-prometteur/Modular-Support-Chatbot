@@ -1,0 +1,119 @@
+[
+    {
+        "source": "privacy_policy",
+        "section": "Data Collection and Usage",
+        "topic": "Personal Data Collection",
+        "question": "What information does Ganare collect from players?",
+        "answer": "Ganare collects, stores, and processes player personal and financial information required for account registration, identity verification, payment processing, regulatory compliance, fraud prevention, customer support, and the provision of gaming services.",
+        "keywords": [
+            "personal data",
+            "financial information",
+            "registration",
+            "identity verification",
+            "payment processing"
+        ]
+    },
+    {
+        "source": "privacy_policy",
+        "section": "Data Collection and Usage",
+        "topic": "Use of Player Information",
+        "question": "Why does Ganare collect my personal information?",
+        "answer": "Player information is collected to support account management, regulatory compliance, fraud prevention, customer support, payment processing, and gaming operations.",
+        "keywords": [
+            "data usage",
+            "account management",
+            "fraud prevention",
+            "customer support"
+        ]
+    },
+    {
+        "source": "privacy_policy",
+        "section": "Data Collection and Usage",
+        "topic": "Sharing of Information",
+        "question": "Does Ganare sell or share my personal information?",
+        "answer": "Ganare does not sell or disclose player personal information except where required by law or when authorized by the player.",
+        "keywords": [
+            "data sharing",
+            "sell data",
+            "privacy",
+            "personal information"
+        ]
+    },
+    {
+        "source": "privacy_policy",
+        "section": "Regulatory Compliance",
+        "topic": "Privacy Regulations",
+        "question": "Does Ganare comply with data protection laws?",
+        "answer": "Ganare complies with all applicable data protection and privacy laws, including the General Data Protection Regulation (GDPR) where applicable, along with other legal and regulatory requirements.",
+        "keywords": [
+            "GDPR",
+            "privacy laws",
+            "data protection",
+            "compliance"
+        ]
+    },
+    {
+        "source": "privacy_policy",
+        "section": "Regulatory Compliance",
+        "topic": "Lawful Processing",
+        "question": "How does Ganare process personal information?",
+        "answer": "Player information is processed lawfully, fairly, and transparently, and appropriate measures are implemented to ensure compliance with applicable data protection obligations.",
+        "keywords": [
+            "lawful processing",
+            "transparent processing",
+            "data handling"
+        ]
+    },
+    {
+        "source": "privacy_policy",
+        "section": "Security Measures",
+        "topic": "Protection of Information",
+        "question": "How does Ganare protect customer information?",
+        "answer": "Ganare maintains industry-standard security measures to protect player personal and financial information from unauthorized access, disclosure, alteration, or destruction.",
+        "keywords": [
+            "security",
+            "data protection",
+            "unauthorized access"
+        ]
+    },
+    {
+        "source": "privacy_policy",
+        "section": "Security Measures",
+        "topic": "Encryption and Infrastructure Security",
+        "question": "Does Ganare use encryption to protect my information?",
+        "answer": "Sensitive financial and personal records are stored in encrypted databases protected by SSL/HTTPS encryption, firewalls, anti-malware systems, and access controls.",
+        "keywords": [
+            "SSL",
+            "HTTPS",
+            "firewall",
+            "encryption",
+            "anti-malware"
+        ]
+    },
+    {
+        "source": "privacy_policy",
+        "section": "Data Retention",
+        "topic": "Retention Period",
+        "question": "How long does Ganare keep my personal information?",
+        "answer": "Ganare securely retains AML documentation, Customer Due Diligence (CDD) records, Enhanced Due Diligence (EDD) documentation, and player transaction records for a minimum of five years or longer if required by law.",
+        "keywords": [
+            "data retention",
+            "five years",
+            "AML records",
+            "CDD",
+            "EDD"
+        ]
+    },
+    {
+        "source": "privacy_policy",
+        "section": "Data Retention",
+        "topic": "Disposal of Information",
+        "question": "What happens to my information after the retention period expires?",
+        "answer": "All retained information is securely stored and disposed of in accordance with applicable legal and regulatory requirements once the retention period expires.",
+        "keywords": [
+            "data deletion",
+            "secure disposal",
+            "retention policy"
+        ]
+    }
+]

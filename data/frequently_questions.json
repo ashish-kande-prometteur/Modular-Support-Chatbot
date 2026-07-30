@@ -1,0 +1,286 @@
+
+{
+  "document_title": "Frequently Asked Questions (FAQs)",
+  "categories": {
+    "general_faqs": [
+      {
+        "id": 1,
+        "question": "Who is eligible to place bets on the platform?",
+        "answer": "You must be 18 years or older to register and place bets. By using the platform, you confirm that you meet the legal age requirement."
+      },
+      {
+        "id": 2,
+        "question": "How do I create an account?",
+        "answer": {
+          "steps": [
+            "Click on Sign Up / Register",
+            "Provide your phone number or email address",
+            "Create a password",
+            "Verify your account using the OTP sent to you"
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "question": "What sports can I bet on?",
+        "answer": {
+          "sports": [
+            "Football",
+            "Basketball",
+            "Tennis",
+            "Boxing",
+            "MMA",
+            "Virtual sports"
+          ],
+          "note": "Availability may vary based on events and seasons."
+        }
+      },
+      {
+        "id": 4,
+        "question": "How do I fund my betting account?",
+        "answer": {
+          "methods": [
+            "Bank transfer",
+            "Debit cards (Verve, Mastercard)",
+            "USSD",
+            "Mobile wallets"
+          ],
+          "currency": "NGN"
+        }
+      },
+      {
+        "id": 5,
+        "question": "Is there a minimum deposit amount?",
+        "answer": "Yes. The minimum deposit amount is displayed on the deposit page and may vary depending on the payment method."
+      },
+      {
+        "id": 6,
+        "question": "How do I place a bet?",
+        "answer": {
+          "steps": [
+            "Select a sport and match",
+            "Choose your preferred odds",
+            "Enter your stake amount",
+            "Click Place Bet to confirm"
+          ],
+          "note": "Once confirmed, bets cannot be canceled."
+        }
+      },
+      {
+        "id": 7,
+        "question": "What types of bets are available?",
+        "answer": {
+          "bet_types": [
+            "Single bets",
+            "Multiple (Accumulator) bets",
+            "System bets",
+            "Live (In-play) betting"
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "question": "How are winnings calculated?",
+        "answer": "Winnings are calculated by multiplying your stake by the selected odds. For multiple bets, odds are combined before calculation."
+      },
+      {
+        "id": 9,
+        "question": "How do I withdraw my winnings?",
+        "answer": {
+          "steps": [
+            "Log in to your account",
+            "Go to Withdraw",
+            "Enter the amount",
+            "Select your bank",
+            "Input your account number",
+            "Submit your request"
+          ],
+          "requirements": [
+            "Account name must match the betting profile name"
+          ],
+          "processing_time": "24-72 hours"
+        }
+      },
+      {
+        "id": 10,
+        "question": "Do I need to verify my account?",
+        "answer": {
+          "required_documents": [
+            "Government-issued ID",
+            "Bank account details"
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "question": "Are there any withdrawal fees?",
+        "answer": {
+          "withdrawal_fee": false,
+          "minimum_withdrawal": 1000,
+          "currency": "NGN",
+          "note": "Payment providers may apply transaction charges."
+        }
+      },
+      {
+        "id": 12,
+        "question": "What happens if a match is postponed or canceled?",
+        "answer": "Canceled or abandoned matches may be declared void and stakes refunded. Postponed matches may remain active depending on platform rules."
+      },
+      {
+        "id": 13,
+        "question": "Can I place bets using my mobile phone?",
+        "answer": "Yes. The platform supports mobile phones, tablets, and desktops."
+      },
+      {
+        "id": 14,
+        "question": "How do I contact customer support?",
+        "answer": {
+          "support_channels": [
+            "Live chat",
+            "Email",
+            "Phone support"
+          ]
+        }
+      },
+      {
+        "id": 15,
+        "question": "Is my personal information safe?",
+        "answer": "Yes. Advanced security and encryption technologies are used to protect personal and financial information."
+      },
+      {
+        "id": 16,
+        "question": "What is responsible betting?",
+        "answer": {
+          "principles": [
+            "Bet within your financial limits",
+            "Do not chase losses",
+            "Know when to take a break"
+          ],
+          "tools": [
+            "Deposit limits",
+            "Self-exclusion"
+          ]
+        }
+      },
+      {
+        "id": 17,
+        "question": "Can I have more than one account?",
+        "answer": "No. Multiple accounts are prohibited and may result in account suspension."
+      }
+    ],
+    "bonus_and_promotions_faqs": [
+      {
+        "id": 18,
+        "question": "What bonuses and promotions are available?",
+        "answer": {
+          "promotions": [
+            "Welcome bonus",
+            "Deposit bonus",
+            "Free bets",
+            "Cashback offers",
+            "Special event promotions"
+          ]
+        }
+      },
+      {
+        "id": 19,
+        "question": "How do I qualify for the welcome bonus?",
+        "answer": {
+          "requirements": [
+            "Create a new account",
+            "Make your first deposit"
+          ]
+        }
+      },
+      {
+        "id": 20,
+        "question": "Is the bonus money withdrawable?",
+        "answer": "Bonus funds are not immediately withdrawable until wagering requirements are completed."
+      },
+      {
+        "id": 21,
+        "question": "What is a wagering requirement?",
+        "answer": {
+          "definition": "A wagering requirement specifies the amount that must be bet before bonus winnings can be withdrawn.",
+          "example": {
+            "bonus_amount": 5000,
+            "wager_multiplier": 7,
+            "required_turnover": 35000,
+            "currency": "NGN"
+          }
+        }
+      },
+      {
+        "id": 22,
+        "question": "Can I withdraw my bonus without placing bets?",
+        "answer": "No. Bonuses cannot be withdrawn without meeting wagering requirements."
+      },
+      {
+        "id": 23,
+        "question": "Do bonuses have an expiry date?",
+        "answer": "Yes. Unused bonuses and free bets expire after the stated validity period."
+      },
+      {
+        "id": 24,
+        "question": "Are there minimum odds for bonus wagering?",
+        "answer": {
+          "minimum_odds": 1.5
+        }
+      },
+      {
+        "id": 25,
+        "question": "Can I use bonus funds on live betting?",
+        "answer": "This depends on the promotion terms. Some promotions allow live betting while others only allow pre-match betting."
+      },
+      {
+        "id": 26,
+        "question": "Can I combine bonus bets in accumulator bets?",
+        "answer": "Yes, unless otherwise stated in the promotion terms."
+      },
+      {
+        "id": 27,
+        "question": "What happens if I withdraw my deposit before wagering the bonus?",
+        "answer": "The bonus and associated winnings may be forfeited."
+      },
+      {
+        "id": 28,
+        "question": "Are bonuses available to existing customers?",
+        "answer": "Yes. Existing customers may receive reload bonuses, cashback offers, and loyalty rewards."
+      },
+      {
+        "id": 29,
+        "question": "Can I claim the same bonus more than once?",
+        "answer": "No. Bonuses are generally limited to one per user, household, IP address, or device."
+      },
+      {
+        "id": 30,
+        "question": "What happens if I violate bonus terms?",
+        "answer": {
+          "possible_actions": [
+            "Bonus cancellation",
+            "Confiscation of winnings",
+            "Account suspension",
+            "Account closure"
+          ]
+        }
+      },
+      {
+        "id": 31,
+        "question": "How will I know when new promotions are available?",
+        "answer": {
+          "notification_channels": [
+            "Website banners",
+            "SMS notifications",
+            "Email updates",
+            "In-app notifications"
+          ]
+        }
+      },
+      {
+        "id": 32,
+        "question": "Can the platform change or cancel promotions?",
+        "answer": "Yes. Promotions may be modified, suspended, or canceled at any time in accordance with platform terms and Nigerian regulations."
+      }
+    ]
+  }
+}

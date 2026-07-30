@@ -52,7 +52,7 @@ function generateUUID() {
     );
 }
 
-let externalUserId = localStorage.getItem("chatbot_external_user_id");
+// let externalUserId = localStorage.getItem("chatbot_external_user_id");
 
 if (!externalUserId) {
     externalUserId =

@@ -1,18 +1,27 @@
 from sentence_transformers import SentenceTransformer
 import psycopg
 from pgvector.psycopg import register_vector
+import os 
 
 model = SentenceTransformer(
     "all-MiniLM-L6-v2"
 )
 
+DB_HOST = os.getenv("DB_HOST", "postgres")
+DB_PORT = os.getenv("DB_PORT", "5432")
+DB_NAME = os.getenv("DB_NAME", "chatbot_db")
+DB_USER = os.getenv("DB_USER", "postgres")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "postgres")
+
+# Create database connection
 conn = psycopg.connect(
-    host="localhost",
-    port=5432,
-    dbname="chatbot_db",
-    user="postgres",
-    password="postgres"
+    host=DB_HOST,
+    port=DB_PORT,
+    dbname=DB_NAME,
+    user=DB_USER,
+    password=DB_PASSWORD,
 )
+
 
 register_vector(conn)
 

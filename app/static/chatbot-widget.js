@@ -266,6 +266,61 @@ if (!externalUserId) {
     margin-bottom: 4px;
     color: #2b6cb0;
 }
+
+    .feedback-popup {
+      text-align: center;
+      padding: 16px 12px;
+      margin: 8px 0 14px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      border: 1px solid #e6e6e6;
+    }
+    .feedback-popup .feedback-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 12px;
+    }
+    .feedback-popup button {
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 10px;
+      padding: 8px 20px;
+      margin: 0 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background .15s ease, transform .1s ease;
+    }
+    .feedback-popup button:hover {
+      background: #f0f0f0;
+      transform: scale(1.05);
+    }
+
+  .msg.thinking {
+    background: #ececec;
+    color: #666;
+    font-style: italic;
+}
+
+.dots::after {
+    content: "";
+    animation: dots 1.2s infinite;
+}
+
+@keyframes dots {
+    0% {
+        content: "";
+    }
+    33% {
+        content: ".";
+    }
+    66% {
+        content: "..";
+    }
+    100% {
+        content: "...";
+    }
+}
   `;
 
   const markup = document.createElement("div");
@@ -300,6 +355,49 @@ if (!externalUserId) {
   const messagesEl = shadow.querySelector(".messages");
   const input = shadow.querySelector("input");
   const sendBtn = shadow.querySelector(".send-btn");
+  let thinkingMessage = null;
+
+
+  async function streamMessage(text, sender) {
+
+      const el = document.createElement("div");
+      el.className = `msg ${sender}`;
+
+      messagesEl.appendChild(el);
+
+      let current = "";
+
+      for (const ch of text) {
+
+          current += ch;
+
+          el.textContent = "🤖 " + current;
+
+          messagesEl.scrollTop = messagesEl.scrollHeight;
+
+          await new Promise(r => setTimeout(r, 12));
+      }
+  }
+
+  function showThinking() {
+    thinkingMessage = document.createElement("div");
+    thinkingMessage.className = "msg bot thinking";
+    thinkingMessage.innerHTML = `
+        🤖 <span class="thinking-text">
+            Thinking<span class="dots"></span>
+        </span>
+    `;
+
+    messagesEl.appendChild(thinkingMessage);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function hideThinking() {
+      if (thinkingMessage) {
+          thinkingMessage.remove();
+          thinkingMessage = null;
+      }
+  }
 
   window.addEventListener("support-agent-auth-changed", syncWidgetVisibility);
   window.addEventListener("storage", (event) => {
@@ -389,6 +487,55 @@ if (!externalUserId) {
   // ------------------------------------------------------------
   // Live agent chat (new)
   // ------------------------------------------------------------
+async function submitFeedback(helpful) {
+
+    await fetch(
+        `${config.apiBase}/api/chat/session/${sessionId}/feedback`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                helpful: helpful,
+            }),
+        }
+    );
+
+    appendMessage(
+        "Thank you for your feedback.",
+        "system",
+    );
+
+    chatWindow.classList.remove("show");
+}
+
+  function showFeedbackPopup() {
+
+      const popup = document.createElement("div");
+
+      popup.className = "feedback-popup";
+
+      const title = document.createElement("div");
+      title.className = "feedback-title";
+      title.textContent = "Was this conversation helpful?";
+
+      const yesBtn = document.createElement("button");
+      yesBtn.textContent = "👍 Yes";
+
+      const noBtn = document.createElement("button");
+      noBtn.textContent = "👎 No";
+
+      yesBtn.addEventListener("click", () => submitFeedback(true));
+      noBtn.addEventListener("click", () => submitFeedback(false));
+
+      popup.appendChild(title);
+      popup.appendChild(yesBtn);
+      popup.appendChild(noBtn);
+
+      messagesEl.appendChild(popup);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
 
   function connectLiveSocket(sid) {
 
@@ -411,21 +558,40 @@ if (!externalUserId) {
         return;
       }
 
-      if (data.type === "system") {
+    if (data.type === "system") {
 
         if (data.event === "agent_joined") {
-          agentActive = true;
-          appendMessage(
-            data.agent_name ? `${data.agent_name} joined the chat` : "A support agent joined the chat",
-            "system"
-          );
-        } else if (data.event === "agent_left") {
-          agentActive = false;
-          appendMessage("The agent left. You're back to chatting with our AI.", "system");
+            agentActive = true;
+
+            appendMessage(
+                data.agent_name + " joined the chat",
+                "system"
+            );
+
+            return;
         }
 
-        return;
-      }
+        if (data.event === "feedback_required") {
+
+            agentActive = false;
+
+            showFeedbackPopup();
+
+            return;
+        }
+
+        if (data.event === "agent_left") {
+
+            agentActive = false;
+
+            appendMessage(
+                "Support session ended.",
+                "system"
+            );
+
+            return;
+        }
+    }
 
       // Don't re-render our own outgoing message if the backend echoes it.
       if (data.sender === "user") return;
@@ -462,6 +628,18 @@ if (!externalUserId) {
     appendMessage(question, "user");
     input.value = "";
 
+    if (agentActive && liveSocket && liveSocket.readyState === WebSocket.OPEN) {
+    liveSocket.send(
+        JSON.stringify({
+            type: "message",
+            text: question,
+        })
+    );
+    return;
+  }
+
+  showThinking();
+
     // While an agent is live on this session, skip the AI REST call
     // entirely and send straight over the WebSocket.
     if (agentActive && liveSocket && liveSocket.readyState === WebSocket.OPEN) {
@@ -483,7 +661,7 @@ if (!externalUserId) {
       });
 
       const data = await res.json();
-
+      hideThinking();
       const previousSessionId = sessionId;
       sessionId = data.session_id || sessionId;
 
@@ -512,7 +690,7 @@ if (!externalUserId) {
       }
 
       if (answerText) {
-          appendMessage(answerText, "bot");
+          streamMessage(answerText, "bot");
       }
 
       if (data.show_feedback) {

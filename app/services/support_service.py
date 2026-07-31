@@ -4,7 +4,7 @@ from app.repositories.support_repository import (
 from app.models.chat_session import SessionStatus
 from app.repositories.agent_repository import AgentRepository
 from app.services.message_service import MessageService
-
+from app.websocket.connection_manager import manager
 class SupportService:
 
     @staticmethod
@@ -105,7 +105,7 @@ class SupportService:
         }
 
     @staticmethod
-    def close_session(
+    async def close_session(
         db,
         session_id,
         agent_id,
@@ -185,6 +185,18 @@ class SupportService:
 
         db.refresh(session)
         db.refresh(agent)
+
+        # -----------------------------------
+        # Notify customer to show feedback popup
+        # -----------------------------------
+        await manager.send_to_user(
+            session_id=str(session.id),
+            message={
+                "type": "system",
+                "event": "feedback_required",
+                "message": "Support session closed.",
+            },
+        )
 
         return {
             "message": "Support session closed successfully.",

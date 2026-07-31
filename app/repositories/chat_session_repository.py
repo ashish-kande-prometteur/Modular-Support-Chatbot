@@ -33,4 +33,19 @@ class ChatSessionRepository:
         session.handoff_requested_at = datetime.utcnow()
 
         return session
+
+    @staticmethod
+    async def save_feedback(
+        db: Session,
+        session: ChatSession,
+        helpful: bool,
+    ):
+        session.helpful = helpful
+        session.feedback_at = datetime.utcnow()
+
+        db.add(session)
+        db.commit()
+        db.refresh(session)
+
+        return session
     

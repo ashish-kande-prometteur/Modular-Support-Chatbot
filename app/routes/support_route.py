@@ -56,7 +56,7 @@ def join_session(
         )
 
 @router.post("/session/{session_id}/close")
-def close_session(
+async def close_session(
     session_id: str,
     payload: CloseSessionRequest,
     db: Session = Depends(get_db),
@@ -73,8 +73,7 @@ def close_session(
     """
 
     try:
-
-        return SupportService.close_session(
+        return await SupportService.close_session(
             db=db,
             session_id=session_id,
             agent_id=payload.agent_id,

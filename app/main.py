@@ -469,6 +469,10 @@ let unreadCount = 0;
 
 let activeSession = null; // { id, socket } for the session currently open in the panel
 
+function emitAgentAuthChange() {
+    window.dispatchEvent(new Event("support-agent-auth-changed"));
+}
+
 agentLoginBtn.onclick = () => {
 
     if (localStorage.getItem("support_agent")) {
@@ -482,6 +486,7 @@ agentLoginBtn.onclick = () => {
         agentLoginBtn.textContent = "Agent Login";
         agentLoginBtn.style.background = "#f5c400";
 
+        emitAgentAuthChange();
         return;
     }
 
@@ -559,6 +564,11 @@ notificationDropdown.addEventListener("click", (e) => {
 });
 
 function connectNotificationSocket(agentId) {
+
+    if (socket) {
+        socket.close();
+        socket = null;
+    }
 
     socket = new WebSocket(
         `ws://${window.location.host}/ws/support?agent_id=${agentId}`
@@ -729,10 +739,17 @@ function connectAgentChatSocket(sessionId, agentId) {
     activeSession.socket = ws;
 }
 
+function getSessionMessagePrefix(sender) {
+    if (sender === "user") return "�";
+    if (sender === "ai") return "🧠";
+    if (sender === "agent") return "👩‍💻";
+    return "💬";
+}
+
 function appendSessionMessage(sender, text) {
     const el = document.createElement("div");
     el.className = `session-msg ${sender}`;
-    el.textContent = text;
+    el.textContent = `${getSessionMessagePrefix(sender)} ${text}`;
     sessionMessagesEl.appendChild(el);
     sessionMessagesEl.scrollTop = sessionMessagesEl.scrollHeight;
 }
@@ -827,22 +844,23 @@ if (Notification.permission === "default") {
 const storedAgent = localStorage.getItem("support_agent");
 
 if (storedAgent) {
-
-    const agent = JSON.parse(storedAgent);
-
-    agentLoginBtn.textContent = "Logout";
-    agentLoginBtn.style.background = "#dc3545";
-
-    connectNotificationSocket(agent.id);
+    try {
+        const agent = JSON.parse(storedAgent);
+        agentLoginBtn.textContent = "Logout";
+        agentLoginBtn.style.background = "#dc3545";
+        emitAgentAuthChange();
+        connectNotificationSocket(agent.id);
+    } catch (err) {
+        localStorage.removeItem("support_agent");
+        localStorage.removeItem("support_access_token");
+    }
 }
 
 document.getElementById("loginBtn").onclick = async () => {
-
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
     try {
-
         const response = await fetch("/api/support/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -865,6 +883,7 @@ document.getElementById("loginBtn").onclick = async () => {
         agentLoginBtn.textContent = "Logout";
         agentLoginBtn.style.background = "#dc3545";
 
+        emitAgentAuthChange();
         connectNotificationSocket(data.agent.id);
 
     } catch (err) {

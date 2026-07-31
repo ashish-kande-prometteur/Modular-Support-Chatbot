@@ -74,6 +74,19 @@ if (!externalUserId) {
   // an agent joined this session over the WebSocket below.
   let liveSocket = null;
   let agentActive = false;
+  let widgetDisabled = false;
+
+  function syncWidgetVisibility() {
+    const agentLoggedIn = !!localStorage.getItem("support_agent");
+    widgetDisabled = agentLoggedIn;
+
+    host.style.display = agentLoggedIn ? "none" : "";
+    chatWindow.classList.remove("show");
+    toggleBtn.disabled = agentLoggedIn;
+    sendBtn.disabled = agentLoggedIn;
+    input.disabled = agentLoggedIn;
+    toggleBtn.setAttribute("aria-disabled", agentLoggedIn ? "true" : "false");
+  }
 
   // ------------------------------------------------------------
   // Shadow DOM host - isolates widget styles from the host page,
@@ -107,6 +120,11 @@ if (!externalUserId) {
       transition: transform .2s ease;
     }
     .chat-btn:hover { transform: scale(1.08); }
+    .chat-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
 
     .chat-window {
       position: fixed;
@@ -283,6 +301,13 @@ if (!externalUserId) {
   const input = shadow.querySelector("input");
   const sendBtn = shadow.querySelector(".send-btn");
 
+  window.addEventListener("support-agent-auth-changed", syncWidgetVisibility);
+  window.addEventListener("storage", (event) => {
+    if (event.key === "support_agent") {
+      syncWidgetVisibility();
+    }
+  });
+
   toggleBtn.addEventListener("click", () => {
     chatWindow.classList.add("show");
   });
@@ -296,17 +321,25 @@ if (!externalUserId) {
     if (e.key === "Enter") sendMessage();
   });
 
+  function getMessagePrefix(sender) {
+    if (sender === "user") return "🧑‍💼";
+    if (sender === "agent") return "🧑‍💼";
+    if (sender === "bot") return "🤖";
+    return "ℹ️";
+  }
+
   function appendMessage(text, sender, senderName = null) {
       const el = document.createElement("div");
       el.className = `msg ${sender}`;
+      const prefix = getMessagePrefix(sender);
 
       if (sender === "agent" && senderName) {
           el.innerHTML = `
-              <div class="sender-name">${senderName}</div>
+              <div class="sender-name">${prefix} ${senderName}</div>
               <div>${text}</div>
           `;
       } else {
-          el.textContent = text;
+          el.textContent = `${prefix} ${text}`;
       }
 
       messagesEl.appendChild(el);
@@ -383,7 +416,7 @@ if (!externalUserId) {
         if (data.event === "agent_joined") {
           agentActive = true;
           appendMessage(
-            data.agent_name ? `${data.agent_name} joined the chat` : "An agent joined the chat",
+            data.agent_name ? `${data.agent_name} joined the chat` : "A support agent joined the chat",
             "system"
           );
         } else if (data.event === "agent_left") {
@@ -418,7 +451,11 @@ if (!externalUserId) {
 
   // ------------------------------------------------------------
 
+  syncWidgetVisibility();
+
   async function sendMessage() {
+    if (widgetDisabled) return;
+
     const question = input.value.trim();
     if (!question) return;
 

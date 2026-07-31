@@ -11,6 +11,7 @@ from app.routes.support_route import router as support_route
 from app.routes.websocket_router import router as websocket_router
 from app.routes.notification_router import router as notification_router
 from app.routes.support_auth import router as auth_router
+from app.routes.feedBack_route import router as feedback_router
 # -----------------------------
 # Database
 # -----------------------------
@@ -72,7 +73,9 @@ app.include_router(
 app.include_router(
     auth_router
 )
-
+app.include_router(
+    feedback_router
+)
 # -----------------------------
 # Demo Page
 # -----------------------------

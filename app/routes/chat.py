@@ -15,6 +15,8 @@ from app.services.message_service import MessageService
 from app.services.conversation_service import ConversationService
 from app.models.chat_session import SessionStatus
 from app.websocket.connection_manager import manager
+from app.services.greeting_service import get_greeting_response
+
 
 router = APIRouter()
 
@@ -50,6 +52,27 @@ async def chat(
         session_id=session.id,
         message=request.question,
     )
+
+    # ----------------------------------------
+    # Greeting Handling
+    # ----------------------------------------
+
+    greeting = get_greeting_response(request.question)
+
+    if greeting:
+
+        message_service.save_ai_message(
+            session_id=session.id,
+            message=greeting,
+        )
+
+        return {
+            "success": True,
+            "session_id": str(session.id),
+            "answer": greeting,
+            "confidence": 1.0,
+            "show_feedback": False,
+        }
 
     # -----------------------------
     # TEST Conversation Memory

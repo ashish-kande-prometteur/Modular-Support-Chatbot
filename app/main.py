@@ -646,6 +646,12 @@ async function joinSession(sessionId, triggerBtn) {
             throw new Error("Join request failed");
         }
 
+        notifications = notifications.filter(
+            n => n.session_id !== sessionId
+        );
+
+        renderNotificationBell();
+
         notificationDropdown.classList.remove("show");
         await openAgentSessionPanel(sessionId, agentData.id);
 

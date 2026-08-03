@@ -1,159 +1,1289 @@
-{
-  "document_title": "Anjouan Website Compliance Guide",
-  "categories": {
-    "legal_and_licensing_requirements": [
-      {
-        "id": "1.1",
-        "title": "Display of Licensing Information",
-        "details": [
-          "Display the Anjouan Internet Gaming License number prominently on the website footer.",
-          "Display the site seal validator prominently on the website footer.",
-          "Display site ownership information including legal company name, registration number and legal address.",
-          "Display links to policies and contact information in the footer.",
-          "Include a link to the Anjouan Gaming regulatory website where applicable."
-        ]
-      },
-      {
-        "id": "1.2",
-        "title": "Terms and Conditions Requirements",
-        "details": [
-          "Provide accessible Terms and Conditions.",
-          "Include eligibility requirements.",
-          "Include jurisdictional restrictions.",
-          "Include rules for gaming participation.",
-          "Include deposit and withdrawal policies.",
-          "Include account management policies.",
-          "Terms and Conditions should be written in clear and understandable language."
-        ]
-      },
-      {
-        "id": "1.3",
-        "title": "Jurisdictional Restrictions",
-        "details": [
-          "Maintain a list of prohibited jurisdictions.",
-          "Implement geolocation technology to block restricted regions."
-        ]
-      }
+[
+  {
+    "id": "RG_1_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "1",
+      "title": "Legal and Licensing Requirements"
+    },
+    "section": {
+      "number": "1.1",
+      "title": "Display of Licensing Information"
+    },
+    "keywords": [
+      "license",
+      "licensing information",
+      "site seal",
+      "validator",
+      "footer",
+      "legal company name",
+      "registration number",
+      "legal address",
+      "contact information",
+      "Anjouan Gaming"
     ],
-
-    "player_protection": [
-      {
-        "id": "2.1",
-        "title": "Age Verification",
-        "details": [
-          "Players must be at least 18 years old.",
-          "Government issued identification should be collected during registration."
-        ]
-      },
-      {
-        "id": "2.2",
-        "title": "Responsible Gaming Features",
-        "details": [
-          "Self exclusion options.",
-          "Deposit limits.",
-          "Loss limits.",
-          "Session duration notifications.",
-          "Links to gambling support organizations."
-        ]
-      },
-      {
-        "id": "2.3",
-        "title": "Privacy Policy",
-        "details": [
-          "Explain how player data is collected.",
-          "Explain how player data is stored.",
-          "Explain how player data is used.",
-          "Comply with GDPR and data protection regulations."
-        ]
-      }
+    "questions": [
+      "What licensing information must be displayed on the website?",
+      "Where should the gaming license be displayed?",
+      "What company information should appear in the footer?",
+      "Should the website display the Anjouan site seal?",
+      "Should contact information be available on the website?",
+      "Should the website link to Anjouan Gaming?"
     ],
-
-    "website_security": [
-      {
-        "id": "3.1",
-        "title": "Secure Data Transmission",
-        "details": [
-          "Use SSL encryption.",
-          "Use HTTPS for all communications."
-        ]
-      },
-      {
-        "id": "3.2",
-        "title": "Cyber Security Controls",
-        "details": [
-          "Use firewalls.",
-          "Use intrusion detection systems.",
-          "Use anti malware software."
-        ]
-      },
-      {
-        "id": "3.3",
-        "title": "Data Protection",
-        "details": [
-          "Store sensitive information in encrypted databases.",
-          "Perform regular vulnerability testing.",
-          "Maintain compliance with international data protection standards."
-        ]
-      }
+    "content": "Licensed operators must prominently display the Anjouan Internet Gaming License number and site seal validator throughout the website footer. The footer must also include the full legal company name, registration number, legal address, links to all policies, contact information, and where applicable, a link to the Anjouan Gaming regulatory website."
+  },
+  {
+    "id": "RG_1_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "1",
+      "title": "Legal and Licensing Requirements"
+    },
+    "section": {
+      "number": "1.2.1",
+      "title": "Terms and Conditions Coverage"
+    },
+    "keywords": [
+      "terms and conditions",
+      "T&C",
+      "eligibility",
+      "minimum age",
+      "jurisdiction",
+      "gaming participation",
+      "deposits",
+      "withdrawals",
+      "account management"
     ],
-
-    "game_integrity_and_fairness": [
-      {
-        "id": "4.1",
-        "title": "Certified Games",
-        "details": [
-          "Games should be certified by iTech Labs.",
-          "Games should be certified by GLI.",
-          "Games should be certified by BMM.",
-          "Certification badges should be displayed."
-        ]
-      },
-      {
-        "id": "4.2",
-        "title": "Random Number Generator",
-        "details": [
-          "RNG systems should be independently audited and certified."
-        ]
-      },
-      {
-        "id": "4.3",
-        "title": "Anti Fraud Measures",
-        "details": [
-          "Detect collusion.",
-          "Prevent bot usage.",
-          "Prevent unfair gaming practices."
-        ]
-      }
+    "questions": [
+      "What should the Terms and Conditions include?",
+      "What information must be covered in the Terms and Conditions?",
+      "Should eligibility requirements be included in the Terms and Conditions?",
+      "Should deposit and withdrawal policies be documented?",
+      "Should account management rules be included?"
     ],
-
-    "transaction_compliance": [
-      {
-        "id": "5.1",
-        "title": "Payment Processing",
-        "details": [
-          "Work only with AML compliant payment providers.",
-          "Support secure payment methods.",
-          "Credit cards, wallets and crypto may be supported."
-        ]
-      },
-      {
-        "id": "5.2",
-        "title": "AML Compliance",
-        "details": [
-          "Verify players above USD 10,000 transaction threshold.",
-          "Monitor suspicious transactions.",
-          "Report suspicious activities to FIU."
-        ]
-      },
-      {
-        "id": "5.3",
-        "title": "Withdrawal Policies",
-        "details": [
-          "Provide withdrawal instructions.",
-          "Publish withdrawal timelines.",
-          "Process payouts promptly after verification."
-        ]
-      }
-    ]
+    "content": "The Terms and Conditions must clearly explain eligibility requirements such as minimum age and jurisdictional restrictions, gaming participation rules, and policies governing deposits, withdrawals, and account management."
+  },
+  {
+    "id": "RG_1_2_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "1",
+      "title": "Legal and Licensing Requirements"
+    },
+    "section": {
+      "number": "1.2.2",
+      "title": "Terms and Conditions Language"
+    },
+    "keywords": [
+      "terms and conditions",
+      "clear language",
+      "simple language",
+      "easy to understand",
+      "readable"
+    ],
+    "questions": [
+      "How should the Terms and Conditions be written?",
+      "Should the Terms and Conditions use simple language?",
+      "Do the Terms and Conditions need to be easy to understand?"
+    ],
+    "content": "The Terms and Conditions should be written in clear, simple, and understandable language so that players can easily understand their rights, responsibilities, and platform policies."
+  },
+  {
+    "id": "RG_1_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "1",
+      "title": "Legal and Licensing Requirements"
+    },
+    "section": {
+      "number": "1.3.1",
+      "title": "Prohibited Jurisdictions"
+    },
+    "keywords": [
+      "prohibited countries",
+      "restricted jurisdictions",
+      "restricted countries",
+      "online gaming restrictions",
+      "jurisdiction"
+    ],
+    "questions": [
+      "What are prohibited jurisdictions?",
+      "Should prohibited countries be listed?",
+      "Can players from restricted countries access the website?",
+      "Which jurisdictions are not allowed?"
+    ],
+    "content": "The website must include a clearly accessible list of prohibited jurisdictions where online gaming is not legally permitted."
+  },
+  {
+    "id": "RG_1_3_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "1",
+      "title": "Legal and Licensing Requirements"
+    },
+    "section": {
+      "number": "1.3.2",
+      "title": "Geolocation Restrictions"
+    },
+    "keywords": [
+      "geolocation",
+      "location blocking",
+      "restricted regions",
+      "geo blocking",
+      "jurisdiction restrictions"
+    ],
+    "questions": [
+      "How should restricted jurisdictions be blocked?",
+      "Should geolocation technology be used?",
+      "Can users from prohibited countries access the website?",
+      "How are jurisdiction restrictions enforced?"
+    ],
+    "content": "Operators should implement geolocation technology to prevent users from accessing gaming services from prohibited jurisdictions."
+  },
+   {
+    "id": "RG_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "2",
+      "title": "Player Protection"
+    },
+    "section": {
+      "number": "2.1",
+      "title": "Age Verification"
+    },
+    "keywords": [
+      "age verification",
+      "minimum age",
+      "18 years",
+      "government id",
+      "identity verification",
+      "registration",
+      "proof of identity",
+      "player verification"
+    ],
+    "questions": [
+      "What is the minimum age to play?",
+      "How is a player's age verified?",
+      "What identification is required during registration?",
+      "Is government-issued ID required?",
+      "Can minors register on the platform?",
+      "What are the age verification requirements?"
+    ],
+    "content": "Operators must implement robust age verification mechanisms to ensure players meet the minimum legal age of 18 years, or a higher age where required by local jurisdiction. During registration, players must provide valid proof of identification such as a government-issued ID to verify their identity and eligibility."
+  },
+  {
+    "id": "RG_2_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "2",
+      "title": "Player Protection"
+    },
+    "section": {
+      "number": "2.2.1",
+      "title": "Responsible Gaming Tools"
+    },
+    "keywords": [
+      "responsible gaming",
+      "self exclusion",
+      "deposit limits",
+      "loss limits",
+      "time limits",
+      "reality checks",
+      "session reminders",
+      "player protection"
+    ],
+    "questions": [
+      "What responsible gaming tools are available?",
+      "Can players self-exclude?",
+      "Can players set deposit limits?",
+      "Can I set a spending limit?",
+      "What are reality checks?",
+      "Can I limit my playing time?",
+      "What player protection tools are provided?"
+    ],
+    "content": "The platform should provide responsible gaming tools that help players control their gambling activity. These include self-exclusion options, deposit limits, loss limits, session time limits, and reality checks such as notifications showing the duration of a player's gaming session."
+  },
+  {
+    "id": "RG_2_2_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "2",
+      "title": "Player Protection"
+    },
+    "section": {
+      "number": "2.2.2",
+      "title": "Responsible Gaming Organizations and Helplines"
+    },
+    "keywords": [
+      "responsible gaming organizations",
+      "gambling helpline",
+      "support organizations",
+      "problem gambling",
+      "player assistance",
+      "help resources"
+    ],
+    "questions": [
+      "Should the platform provide gambling support links?",
+      "Where can players get help for gambling addiction?",
+      "Should responsible gaming organizations be displayed?",
+      "Are helplines required?",
+      "How can players get gambling support?"
+    ],
+    "content": "The website should prominently display links to responsible gaming organizations and gambling support helplines so that players can easily access assistance if they experience gambling-related problems."
+  },
+  {
+    "id": "RG_2_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "2",
+      "title": "Player Protection"
+    },
+    "section": {
+      "number": "2.3.1",
+      "title": "Privacy Policy"
+    },
+    "keywords": [
+      "privacy policy",
+      "player data",
+      "data collection",
+      "data storage",
+      "data usage",
+      "GDPR",
+      "data protection",
+      "personal information"
+    ],
+    "questions": [
+      "What should the privacy policy include?",
+      "How is player data collected?",
+      "How is player information stored?",
+      "How is player data used?",
+      "Does the platform comply with GDPR?",
+      "How is personal information protected?",
+      "What data protection regulations apply?"
+    ],
+    "content": "The website must publish a clear privacy policy explaining how player data is collected, stored, processed, and used. The privacy policy should also describe compliance with applicable data protection regulations such as the General Data Protection Regulation (GDPR), where applicable."
+  },
+  {
+    "id": "RG_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "3",
+      "title": "Website Security"
+    },
+    "section": {
+      "number": "3.1",
+      "title": "Secure Data Transmission"
+    },
+    "keywords": [
+      "secure data transmission",
+      "age verification",
+      "minimum age",
+      "18 years",
+      "identity verification",
+      "government id",
+      "registration",
+      "player verification"
+    ],
+    "questions": [
+      "How should players be verified during registration?",
+      "What is required for age verification?",
+      "What proof of identity is required?",
+      "What is the minimum legal age?",
+      "How is player eligibility verified?",
+      "Is government-issued ID required?"
+    ],
+    "content": "Operators must implement robust age verification mechanisms to ensure players meet the minimum legal age of 18 years, or a higher age where required by the applicable jurisdiction. During registration, players must provide valid proof of identification, such as a government-issued ID, to verify their identity and eligibility."
+  },
+  {
+    "id": "RG_3_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "3",
+      "title": "Website Security"
+    },
+    "section": {
+      "number": "3.2.1",
+      "title": "SSL Encryption"
+    },
+    "keywords": [
+      "SSL",
+      "HTTPS",
+      "secure socket layer",
+      "encrypted communication",
+      "secure transmission",
+      "player data",
+      "website security"
+    ],
+    "questions": [
+      "Should the website use SSL?",
+      "Is HTTPS required?",
+      "How is player data protected during transmission?",
+      "Why should SSL encryption be used?",
+      "How should data be transmitted securely?",
+      "What security protocol should the website use?"
+    ],
+    "content": "The website should use Secure Socket Layer (SSL) encryption, such as HTTPS, to protect player data while it is transmitted between users and the platform, ensuring confidentiality and preventing unauthorized access."
+  },
+  {
+    "id": "RG_3_2_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "3",
+      "title": "Website Security"
+    },
+    "section": {
+      "number": "3.2.2",
+      "title": "Cybersecurity Protection"
+    },
+    "keywords": [
+      "firewall",
+      "intrusion detection",
+      "IDS",
+      "anti malware",
+      "cyber security",
+      "website protection",
+      "threat detection",
+      "security software"
+    ],
+    "questions": [
+      "How should the website be protected from cyber threats?",
+      "Are firewalls required?",
+      "Should intrusion detection systems be used?",
+      "Is anti-malware software required?",
+      "What cybersecurity measures should be implemented?",
+      "How can the website be secured?"
+    ],
+    "content": "Operators should employ firewalls, intrusion detection systems (IDS), and anti-malware software to protect the website from cyber threats, unauthorized access, malware, and other security risks."
+  },
+  {
+    "id": "RG_3_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "3",
+      "title": "Website Security"
+    },
+    "section": {
+      "number": "3.3.1",
+      "title": "Encrypted Data Storage"
+    },
+    "keywords": [
+      "encrypted database",
+      "data encryption",
+      "player information",
+      "personal data",
+      "financial data",
+      "secure storage",
+      "database security"
+    ],
+    "questions": [
+      "How should player data be stored?",
+      "Should personal information be encrypted?",
+      "How should financial data be protected?",
+      "Should sensitive information be stored in encrypted databases?",
+      "How is player information secured?"
+    ],
+    "content": "Sensitive player information, including personal and financial data, should be stored in encrypted databases to protect it from unauthorized access and maintain confidentiality."
+  },
+  {
+    "id": "RG_3_3_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "3",
+      "title": "Website Security"
+    },
+    "section": {
+      "number": "3.3.2",
+      "title": "Security Testing and Compliance"
+    },
+    "keywords": [
+      "security testing",
+      "vulnerability assessment",
+      "penetration testing",
+      "data protection standards",
+      "compliance",
+      "security audit",
+      "system vulnerabilities"
+    ],
+    "questions": [
+      "How often should the system be tested for vulnerabilities?",
+      "Should regular security testing be performed?",
+      "How is compliance with security standards maintained?",
+      "Why are vulnerability assessments important?",
+      "What are the website security compliance requirements?"
+    ],
+    "content": "Operators should regularly test their systems for vulnerabilities and maintain compliance with global data protection and security standards to ensure ongoing protection against evolving security threats."
+  },
+  {
+    "id": "RG_4_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "4",
+      "title": "Game Integrity and Fairness"
+    },
+    "section": {
+      "number": "4.1",
+      "title": "Certified Games"
+    },
+    "keywords": [
+      "certified games",
+      "game certification",
+      "third party testing",
+      "iTech Labs",
+      "BMM",
+      "GLI",
+      "game fairness",
+      "certification badge",
+      "independent testing"
+    ],
+    "questions": [
+      "Do games need to be certified?",
+      "Who can certify games?",
+      "Which testing agencies are recognized?",
+      "Should certification badges be displayed?",
+      "How is game fairness verified?",
+      "What organizations test casino games?"
+    ],
+    "content": "All games offered on the website must be tested and certified by independent third-party testing agencies recognized by Anjouan Licensing Services Inc., such as iTech Labs, BMM, and GLI. Certification badges should be prominently displayed on the website to demonstrate compliance and game fairness."
+  },
+  {
+    "id": "RG_4_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "4",
+      "title": "Game Integrity and Fairness"
+    },
+    "section": {
+      "number": "4.2.1",
+      "title": "Random Number Generator (RNG) Security"
+    },
+    "keywords": [
+      "RNG",
+      "random number generator",
+      "SSL",
+      "HTTPS",
+      "secure transmission",
+      "encrypted communication",
+      "player data"
+    ],
+    "questions": [
+      "How should RNG-related data be protected?",
+      "Should HTTPS be used?",
+      "Should SSL encryption be enabled?",
+      "How is player data protected during transmission?",
+      "What security protocol should the website use?"
+    ],
+    "content": "Use Secure Socket Layer (SSL) encryption, such as HTTPS, to protect player data during transmission and ensure secure communication between players and the gaming platform."
+  },
+  {
+    "id": "RG_4_2_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "4",
+      "title": "Game Integrity and Fairness"
+    },
+    "section": {
+      "number": "4.2.2",
+      "title": "Website Security for RNG Systems"
+    },
+    "keywords": [
+      "firewall",
+      "intrusion detection",
+      "IDS",
+      "anti malware",
+      "website security",
+      "cyber attacks",
+      "game security"
+    ],
+    "questions": [
+      "How should gaming systems be protected?",
+      "Are firewalls required?",
+      "Should intrusion detection systems be implemented?",
+      "Is anti-malware software required?",
+      "How can gaming systems be secured?"
+    ],
+    "content": "Employ firewalls, intrusion detection systems, and anti-malware software to secure gaming infrastructure against cyber threats and unauthorized access."
+  },
+  {
+    "id": "RG_4_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "4",
+      "title": "Game Integrity and Fairness"
+    },
+    "section": {
+      "number": "4.3.1",
+      "title": "Anti-Fraud Measures"
+    },
+    "keywords": [
+      "anti fraud",
+      "collusion",
+      "bot detection",
+      "cheating",
+      "unfair practices",
+      "fraud prevention",
+      "game integrity"
+    ],
+    "questions": [
+      "How should fraud be prevented?",
+      "How can collusion be detected?",
+      "Should bots be prevented?",
+      "What anti-fraud measures are required?",
+      "How are unfair gaming practices prevented?",
+      "How is game integrity maintained?"
+    ],
+    "content": "Implement systems capable of detecting and preventing collusion, automated bot usage, cheating, and other unfair practices to maintain the integrity and fairness of all games offered on the platform."
+  },
+   {
+    "id": "RG_5_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "5",
+      "title": "Transaction Compliance"
+    },
+    "section": {
+      "number": "5.1",
+      "title": "Payment Processing"
+    },
+    "keywords": [
+      "payment processing",
+      "payment providers",
+      "AML",
+      "CFT",
+      "credit cards",
+      "e-wallets",
+      "cryptocurrency",
+      "secure payments",
+      "payment methods"
+    ],
+    "questions": [
+      "What payment providers should be used?",
+      "Which payment methods should the platform support?",
+      "Can cryptocurrency payments be accepted?",
+      "Should payment providers comply with AML/CFT?",
+      "What are the payment processing requirements?",
+      "Which secure payment options should be offered?"
+    ],
+    "content": "Operators should work only with reputable payment providers that comply with Anti-Money Laundering (AML) and Counter Financing of Terrorism (CFT) standards. The platform should offer multiple secure payment options, including credit cards, e-wallets, and cryptocurrency where permitted."
+  },
+  {
+    "id": "RG_5_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "5",
+      "title": "Transaction Compliance"
+    },
+    "section": {
+      "number": "5.2.1",
+      "title": "Identity Verification for High-Value Transactions"
+    },
+    "keywords": [
+      "AML",
+      "CFT",
+      "identity verification",
+      "KYC",
+      "10000 USD",
+      "high value transactions",
+      "player verification",
+      "transaction threshold"
+    ],
+    "questions": [
+      "When is identity verification required?",
+      "What is the AML transaction threshold?",
+      "When must KYC verification be completed?",
+      "At what amount should players be verified?",
+      "Is verification required for transactions above $10,000?"
+    ],
+    "content": "Operators must verify the identity of players for transactions exceeding USD 10,000, or the equivalent amount, as well as for cumulative transactions over a defined period, in accordance with AML/CFT requirements."
+  },
+  {
+    "id": "RG_5_2_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "5",
+      "title": "Transaction Compliance"
+    },
+    "section": {
+      "number": "5.2.2",
+      "title": "Suspicious Transaction Monitoring"
+    },
+    "keywords": [
+      "suspicious transactions",
+      "AML monitoring",
+      "FIU",
+      "Financial Intelligence Unit",
+      "transaction monitoring",
+      "fraud detection",
+      "compliance reporting"
+    ],
+    "questions": [
+      "How should suspicious transactions be handled?",
+      "Should suspicious transactions be reported?",
+      "What is the Financial Intelligence Unit?",
+      "When should transactions be reported to the FIU?",
+      "What are AML monitoring requirements?"
+    ],
+    "content": "Operators should continuously monitor player transactions for suspicious activity and report any required cases to the Financial Intelligence Unit (FIU) in accordance with AML/CFT regulations."
+  },
+  {
+    "id": "RG_5_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "5",
+      "title": "Transaction Compliance"
+    },
+    "section": {
+      "number": "5.3.1",
+      "title": "Withdrawal Policy"
+    },
+    "keywords": [
+      "withdrawals",
+      "withdrawal policy",
+      "withdrawal instructions",
+      "withdrawal timelines",
+      "terms and conditions",
+      "player payouts"
+    ],
+    "questions": [
+      "What should the withdrawal policy include?",
+      "Should withdrawal timelines be published?",
+      "Where should withdrawal instructions be available?",
+      "Should withdrawal rules be included in the Terms and Conditions?",
+      "How should withdrawals be explained to players?"
+    ],
+    "content": "The Terms and Conditions should clearly describe the withdrawal process, including withdrawal instructions, eligibility requirements, and expected payout timelines so that players understand how withdrawals are processed."
+  },
+  {
+    "id": "RG_5_3_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "5",
+      "title": "Transaction Compliance"
+    },
+    "section": {
+      "number": "5.3.2",
+      "title": "Payout Processing"
+    },
+    "keywords": [
+      "payouts",
+      "withdrawals",
+      "payment verification",
+      "payment processing",
+      "verification requirements",
+      "player payments"
+    ],
+    "questions": [
+      "How quickly should payouts be processed?",
+      "Are payouts subject to verification?",
+      "How are player withdrawals processed?",
+      "What are the payout requirements?",
+      "Can payouts be delayed for verification?"
+    ],
+    "content": "Player payouts should be processed promptly while remaining subject to any required identity verification and compliance checks before funds are released."
+  },
+   {
+    "id": "RG_6_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "6",
+      "title": "User Experience and Accessibility"
+    },
+    "section": {
+      "number": "6.1",
+      "title": "User-Friendly Design"
+    },
+    "keywords": [
+      "user experience",
+      "website design",
+      "easy navigation",
+      "games",
+      "support",
+      "account management",
+      "website usability",
+      "navigation"
+    ],
+    "questions": [
+      "How should the website be designed?",
+      "What are the website design requirements?",
+      "Should the website be easy to navigate?",
+      "What sections should be clearly labeled?",
+      "How can the website improve user experience?",
+      "What makes the website user-friendly?"
+    ],
+    "content": "The website should be designed to provide a user-friendly experience with easy navigation. Sections such as games, customer support, and account management should be clearly labeled so that players can quickly find the information and services they need."
+  },
+  {
+    "id": "RG_6_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "6",
+      "title": "User Experience and Accessibility"
+    },
+    "section": {
+      "number": "6.2.1",
+      "title": "Language Support"
+    },
+    "keywords": [
+      "language support",
+      "identity verification",
+      "AML",
+      "CFT",
+      "10000 USD",
+      "transaction verification",
+      "player verification"
+    ],
+    "questions": [
+      "When should player identity be verified?",
+      "What is the transaction threshold for identity verification?",
+      "Is verification required for transactions above $10,000?",
+      "What are the AML verification requirements?"
+    ],
+    "content": "Verify the identity of players for transactions exceeding USD 10,000 or the equivalent amount, as well as cumulative transactions over a defined period, in accordance with AML/CFT compliance requirements."
+  },
+  {
+    "id": "RG_6_2_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "6",
+      "title": "User Experience and Accessibility"
+    },
+    "section": {
+      "number": "6.2.2",
+      "title": "Language Support"
+    },
+    "keywords": [
+      "language support",
+      "suspicious transactions",
+      "AML monitoring",
+      "Financial Intelligence Unit",
+      "FIU",
+      "transaction monitoring"
+    ],
+    "questions": [
+      "How should suspicious transactions be handled?",
+      "Should suspicious transactions be reported?",
+      "When should transactions be reported to the FIU?",
+      "What is the Financial Intelligence Unit?"
+    ],
+    "content": "Monitor transactions for suspicious activity and report cases to the Financial Intelligence Unit (FIU) as required under AML/CFT regulations."
+  },
+  {
+    "id": "RG_6_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "6",
+      "title": "User Experience and Accessibility"
+    },
+    "section": {
+      "number": "6.3.1",
+      "title": "Accessibility Features"
+    },
+    "keywords": [
+      "accessibility",
+      "WCAG",
+      "players with disabilities",
+      "accessible website",
+      "web accessibility",
+      "inclusive design",
+      "Web Content Accessibility Guidelines"
+    ],
+    "questions": [
+      "How should the website support players with disabilities?",
+      "Should the website comply with WCAG?",
+      "What accessibility standards should be followed?",
+      "How can the website be made accessible?",
+      "What are the accessibility requirements?"
+    ],
+    "content": "The website should be accessible to players with disabilities by following recognized accessibility standards such as the Web Content Accessibility Guidelines (WCAG), ensuring an inclusive experience for all users."
+  },
+  {
+    "id": "RG_7_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "7",
+      "title": "Advertising and Marketing Compliance"
+    },
+    "section": {
+      "number": "7.1",
+      "title": "Responsible Marketing"
+    },
+    "keywords": [
+      "responsible marketing",
+      "advertising",
+      "marketing compliance",
+      "minors",
+      "vulnerable individuals",
+      "financial problems",
+      "guaranteed winnings",
+      "ethical advertising"
+    ],
+    "questions": [
+      "What are the responsible marketing requirements?",
+      "Can gambling advertisements target minors?",
+      "Can advertisements target vulnerable individuals?",
+      "Can gambling be promoted as a solution to financial problems?",
+      "Can operators guarantee winnings in advertisements?",
+      "What marketing practices are prohibited?"
+    ],
+    "content": "Marketing and advertising materials must not target minors or vulnerable individuals. They must not promote gambling as a solution to financial problems or imply or guarantee winnings."
+  },
+  {
+    "id": "RG_7_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "7",
+      "title": "Advertising and Marketing Compliance"
+    },
+    "section": {
+      "number": "7.2.1",
+      "title": "Clear Promotions - Terms and Conditions"
+    },
+    "keywords": [
+      "bonuses",
+      "promotions",
+      "terms and conditions",
+      "promotion rules",
+      "bonus conditions",
+      "marketing transparency"
+    ],
+    "questions": [
+      "What information should promotional offers include?",
+      "Should bonus terms and conditions be displayed?",
+      "Are promotion rules required?",
+      "How should bonuses be explained?",
+      "What should promotional materials contain?"
+    ],
+    "content": "Promotional offers and bonuses must clearly state all applicable terms and conditions so that players fully understand the offer before participating."
+  },
+  {
+    "id": "RG_7_2_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "7",
+      "title": "Advertising and Marketing Compliance"
+    },
+    "section": {
+      "number": "7.2.2",
+      "title": "Clear Promotions - Wagering Requirements"
+    },
+    "keywords": [
+      "wagering requirements",
+      "bonus expiry",
+      "promotion expiry",
+      "bonus rules",
+      "bonus conditions",
+      "promotional materials"
+    ],
+    "questions": [
+      "Should wagering requirements be displayed?",
+      "Should bonus expiry dates be included?",
+      "What promotion details should be published?",
+      "How should wagering requirements be communicated?",
+      "What should promotional materials include?"
+    ],
+    "content": "Promotional materials should clearly include wagering requirements, bonus conditions, and expiry dates so that players understand the requirements associated with promotional offers."
+  },
+  {
+    "id": "RG_7_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "7",
+      "title": "Advertising and Marketing Compliance"
+    },
+    "section": {
+      "number": "7.3.1",
+      "title": "Affiliate Oversight"
+    },
+    "keywords": [
+      "affiliate marketing",
+      "affiliate partners",
+      "marketing compliance",
+      "affiliate oversight",
+      "Anjouan regulations",
+      "marketing policies"
+    ],
+    "questions": [
+      "How should affiliate partners be monitored?",
+      "Are affiliate marketers required to comply with regulations?",
+      "What are the affiliate oversight requirements?",
+      "Should affiliate marketing comply with Anjouan Gaming regulations?",
+      "How should affiliate marketing be managed?"
+    ],
+    "content": "Operators should monitor affiliate marketing partners to ensure that all promotional activities comply with internal marketing policies and Anjouan Gaming regulations."
+  },
+   {
+    "id": "RG_8_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "8",
+      "title": "Dispute Resolution"
+    },
+    "section": {
+      "number": "8.1",
+      "title": "Complaint Procedures"
+    },
+    "keywords": [
+      "complaint procedure",
+      "player complaints",
+      "dispute resolution",
+      "complaint process",
+      "ADR",
+      "alternative dispute resolution",
+      "Anjouan Gaming",
+      "escalated complaints"
+    ],
+    "questions": [
+      "How can players file a complaint?",
+      "Should the website provide a complaint procedure?",
+      "What is the complaint process?",
+      "Should there be a dispute resolution process?",
+      "What is Alternative Dispute Resolution (ADR)?",
+      "Should the website participate in ADR?",
+      "Should there be a link to dispute resolution guidelines?",
+      "How are escalated complaints handled?"
+    ],
+    "content": "The website must provide a clear and easily accessible process for players to submit complaints. It should include a link to Anjouan Gaming's dispute resolution guidelines for escalated issues and participate in mandatory Alternative Dispute Resolution (ADR) procedures."
+  },
+  {
+    "id": "RG_8_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "8",
+      "title": "Dispute Resolution"
+    },
+    "section": {
+      "number": "8.2.1",
+      "title": "Complaint Response Timelines"
+    },
+    "keywords": [
+      "response timeline",
+      "complaint response",
+      "player complaints",
+      "1 working day",
+      "14 days",
+      "complaint resolution",
+      "customer support",
+      "service level"
+    ],
+    "questions": [
+      "How quickly should player complaints be acknowledged?",
+      "What is the complaint response timeline?",
+      "How long should complaint resolution take?",
+      "When should customer complaints be resolved?",
+      "How fast should support respond to complaints?",
+      "What are the complaint handling requirements?"
+    ],
+    "content": "Player complaints should be acknowledged within one working day. Operators should provide a resolution within a reasonable timeframe, such as 14 days, depending on the complexity of the issue."
+  },
+  {
+    "id": "RG_9_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "9",
+      "title": "Technical Requirements"
+    },
+    "section": {
+      "number": "9.1",
+      "title": "Website Uptime"
+    },
+    "keywords": [
+      "website uptime",
+      "99.9% uptime",
+      "availability",
+      "reliable access",
+      "backup systems",
+      "business continuity",
+      "contingency plan",
+      "system availability"
+    ],
+    "questions": [
+      "What is the required website uptime?",
+      "How much uptime should the website maintain?",
+      "Should the platform have backup systems?",
+      "What happens during outages?",
+      "Are contingency plans required?",
+      "How can reliable website access be ensured?"
+    ],
+    "content": "The website should maintain a minimum uptime of 99.9% to provide reliable access to players. Operators should also implement contingency plans, including backup systems, to minimize service interruptions during outages."
+  },
+  {
+    "id": "RG_9_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "9",
+      "title": "Technical Requirements"
+    },
+    "section": {
+      "number": "9.2.1",
+      "title": "Server Location"
+    },
+    "keywords": [
+      "server location",
+      "hosting",
+      "secure servers",
+      "Anjouan Gaming",
+      "approved servers",
+      "reputable jurisdictions",
+      "infrastructure",
+      "hosting requirements"
+    ],
+    "questions": [
+      "Where should the website be hosted?",
+      "What are the server location requirements?",
+      "Should servers be approved by Anjouan Gaming?",
+      "Can the website be hosted in any country?",
+      "What type of hosting infrastructure is required?"
+    ],
+    "content": "The website should be hosted on secure servers that are either approved by Anjouan Gaming or located in reputable jurisdictions to ensure security, reliability, and regulatory compliance."
+  },
+  {
+    "id": "RG_9_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "9",
+      "title": "Technical Requirements"
+    },
+    "section": {
+      "number": "9.3.1",
+      "title": "Regular Updates"
+    },
+    "keywords": [
+      "software updates",
+      "security updates",
+      "plugins",
+      "maintenance",
+      "website software",
+      "latest versions",
+      "security patches",
+      "system updates"
+    ],
+    "questions": [
+      "How often should the website be updated?",
+      "Should plugins be updated regularly?",
+      "Should security measures be kept up to date?",
+      "Why are software updates important?",
+      "What technical maintenance is required?"
+    ],
+    "content": "Operators should regularly update website software, plugins, and security measures to the latest available versions in order to maintain system security, stability, and compliance."
+  },
+   {
+    "id": "RG_10_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "10",
+      "title": "Audit and Reporting"
+    },
+    "section": {
+      "number": "10.1",
+      "title": "Compliance Audits"
+    },
+    "keywords": [
+      "compliance audit",
+      "independent audit",
+      "third-party auditor",
+      "Anjouan Licensing Services",
+      "regulatory audit",
+      "compliance review",
+      "audit requirements"
+    ],
+    "questions": [
+      "Are compliance audits required?",
+      "Who performs compliance audits?",
+      "Should operators undergo regular audits?",
+      "What are the audit requirements?",
+      "Are third-party auditors required?",
+      "Who approves compliance auditors?"
+    ],
+    "content": "Operators must undergo regular compliance audits conducted by approved independent third-party auditors on behalf of Anjouan Licensing Services Inc. to ensure continued compliance with regulatory requirements."
+  },
+  {
+    "id": "RG_10_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "10",
+      "title": "Audit and Reporting"
+    },
+    "section": {
+      "number": "10.2.1",
+      "title": "Player Reporting"
+    },
+    "keywords": [
+      "player reporting",
+      "activity reports",
+      "responsible gaming reports",
+      "financial reporting",
+      "regulatory reporting",
+      "Anjouan Licensing Services",
+      "periodic reports"
+    ],
+    "questions": [
+      "What reports must operators provide?",
+      "Should player activity reports be submitted?",
+      "What should periodic reports include?",
+      "Are responsible gaming reports required?",
+      "Should financial performance be reported?",
+      "Who receives the reports?"
+    ],
+    "content": "Operators should provide periodic reports to Anjouan Licensing Services Inc. covering player activity, responsible gaming measures, and financial performance as required by regulatory obligations."
+  },
+  {
+    "id": "RG_10_3_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "10",
+      "title": "Audit and Reporting"
+    },
+    "section": {
+      "number": "10.3.1",
+      "title": "Incident Reporting"
+    },
+    "keywords": [
+      "incident reporting",
+      "data breach",
+      "system failure",
+      "security incident",
+      "24 hours",
+      "regulatory notification",
+      "major incident",
+      "Anjouan Licensing Services"
+    ],
+    "questions": [
+      "When should major incidents be reported?",
+      "How quickly should data breaches be reported?",
+      "Should system failures be reported?",
+      "What incidents must be reported?",
+      "Who should be notified after a security incident?",
+      "What is the reporting timeline for major incidents?"
+    ],
+    "content": "Operators must notify Anjouan Licensing Services Inc. within 24 hours of any major incident, including data breaches or significant system failures, in accordance with regulatory reporting requirements."
+  },
+    {
+    "id": "RG_11_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "11",
+      "title": "Continuous Improvement"
+    },
+    "section": {
+      "number": "11.1",
+      "title": "Feedback Mechanisms"
+    },
+    "keywords": [
+      "feedback",
+      "player feedback",
+      "customer feedback",
+      "suggestions",
+      "complaints",
+      "continuous improvement",
+      "service improvement",
+      "compliance"
+    ],
+    "questions": [
+      "Should the platform collect player feedback?",
+      "How should player suggestions be handled?",
+      "Why is customer feedback important?",
+      "Should the website have a feedback system?",
+      "How can services be continuously improved?",
+      "How does feedback support compliance?"
+    ],
+    "content": "Operators should implement a feedback system that allows players to submit suggestions and complaints. The collected feedback should be used to improve services, enhance the player experience, and support ongoing regulatory compliance."
+  },
+  {
+    "id": "RG_11_2_1",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "11",
+      "title": "Continuous Improvement"
+    },
+    "section": {
+      "number": "11.2.1",
+      "title": "Staff Training"
+    },
+    "keywords": [
+      "staff training",
+      "employee training",
+      "regulatory requirements",
+      "compliance training",
+      "gaming regulations",
+      "compliance measures",
+      "training program"
+    ],
+    "questions": [
+      "Should staff receive compliance training?",
+      "How often should employees be trained?",
+      "What should staff training include?",
+      "Are employees required to understand gaming regulations?",
+      "What regulatory training is required?"
+    ],
+    "content": "Operators should regularly train staff on regulatory requirements, compliance measures, and operational procedures to ensure ongoing compliance with Anjouan Gaming regulations."
+  },
+  {
+    "id": "RG_11_2_2",
+    "source": "responsible_gaming",
+    "document": "Anjouan Website Compliance Guide",
+    "chapter": {
+      "number": "11",
+      "title": "Continuous Improvement"
+    },
+    "section": {
+      "number": "11.2.2",
+      "title": "Regulatory Updates"
+    },
+    "keywords": [
+      "regulatory updates",
+      "Anjouan Gaming regulations",
+      "international standards",
+      "compliance updates",
+      "regulation changes",
+      "continuous compliance"
+    ],
+    "questions": [
+      "How should operators stay compliant?",
+      "Should operators monitor regulation changes?",
+      "How can businesses stay updated with Anjouan Gaming regulations?",
+      "Should international standards be monitored?",
+      "Why are regulatory updates important?"
+    ],
+    "content": "Operators should stay informed about changes to Anjouan Gaming regulations and applicable international standards to ensure continuous compliance and adopt any required operational or technical updates."
   }
-}
+]

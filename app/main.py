@@ -38,7 +38,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET", "POST", "PATCH"],
     allow_headers=["*"],
 )
 
@@ -399,7 +399,7 @@ DEMO_HTML = """
 
     <div style="display:flex;align-items:center;gap:15px;position:relative;">
 
-        <div id="notificationBell">
+        <div id="notificationBell" style="display:none;">
             🔔
             <span id="notificationCount">0</span>
 
@@ -495,6 +495,12 @@ agentLoginBtn.onclick = () => {
         agentLoginBtn.textContent = "Agent Login";
         agentLoginBtn.style.background = "#f5c400";
 
+        // Hide bell and clear notifications on logout
+        notificationBell.style.display = "none";
+        notifications = [];
+        unreadCount = 0;
+        renderNotificationBell();
+
         emitAgentAuthChange();
         return;
     }
@@ -510,12 +516,6 @@ document.getElementById("cancelBtn").onclick = () => {
 notificationBell.addEventListener("click", (e) => {
     e.stopPropagation();
     notificationDropdown.classList.toggle("show");
-
-    if (notificationDropdown.classList.contains("show")) {
-        unreadCount = 0;
-        notifications.forEach(n => n.read = true);
-        renderNotificationBell();
-    }
 });
 
 document.addEventListener("click", (e) => {
@@ -525,21 +525,75 @@ document.addEventListener("click", (e) => {
 });
 
 function renderNotificationBell() {
+    // Only show unread notifications in the dropdown
+    const unreadNotifications = notifications.filter(n => !n.read);
+
+    unreadCount = unreadNotifications.length;
     notificationCountEl.textContent = unreadCount;
     notificationCountEl.style.display = unreadCount > 0 ? "flex" : "none";
 
-    if (notifications.length === 0) {
+    if (unreadNotifications.length === 0) {
         notificationDropdown.innerHTML = `<div class="empty">No notifications yet</div>`;
         return;
     }
 
-    notificationDropdown.innerHTML = notifications.map(n => `
-        <div class="item">
-            <h4>${n.title}</h4>
+    notificationDropdown.innerHTML = unreadNotifications.map(n => `
+        <div class="item" style="background:#fffde7;" data-notification-id="${n.notification_id || ''}">
+            <h4>${n.title} <span style="color:#f5c400;font-size:10px;">●</span></h4>
             <p>${n.message}</p>
-            ${n.session_id ? `<button class="join-btn" data-session-id="${n.session_id}">Join chat</button>` : ""}
+            ${n.session_id ? `<button class="join-btn" data-session-id="${n.session_id}" data-nid="${n.notification_id || ''}">Join chat</button>` : ""}
         </div>
     `).join("");
+}
+
+async function markNotificationAsRead(notificationId) {
+    if (!notificationId) return;
+    try {
+        const res = await fetch(`${API_BASE}/ws/support/notifications/${notificationId}/read`, {
+            method: "PATCH",
+        });
+        if (!res.ok) throw new Error("Failed to mark as read");
+
+        // Mark as read so it disappears from the dropdown
+        const target = notifications.find(n => n.notification_id === notificationId);
+        if (target) target.read = true;
+
+        renderNotificationBell();
+    } catch (err) {
+        console.error("Mark-as-read failed:", err);
+    }
+}
+
+async function fetchUnreadNotifications() {
+    try {
+        const res = await fetch(`${API_BASE}/ws/support/notifications/unread`);
+        if (!res.ok) throw new Error("Failed to fetch unread notifications");
+
+        const data = await res.json();
+
+        // Merge API notifications with any already in the local list
+        const existingIds = new Set(notifications.map(n => n.notification_id).filter(Boolean));
+
+        data.forEach(n => {
+            if (!existingIds.has(String(n.id))) {
+                notifications.unshift({
+                    notification_id: String(n.id),
+                    title: n.title,
+                    message: n.message,
+                    session_id: n.session_id ? String(n.session_id) : null,
+                    external_user_id: n.external_user_id,
+                    read: false,
+                    created_at: new Date(n.created_at),
+                    metadata: n.metadata,
+                });
+            }
+        });
+
+        unreadCount = notifications.filter(n => !n.read).length;
+        renderNotificationBell();
+    } catch (err) {
+        console.error("Fetch unread notifications failed:", err);
+    }
 }
 
 function showNotification(title, message, sessionId) {
@@ -594,9 +648,14 @@ function connectNotificationSocket(agentId) {
         showNotification(data.title, data.message, data.session_id);
 
         notifications.unshift({
-            ...data,
+            notification_id: data.notification_id || null,
+            title: data.title,
+            message: data.message,
+            session_id: data.session_id,
+            external_user_id: data.external_user_id,
             read: false,
-            created_at: new Date()
+            created_at: new Date(),
+            metadata: data.metadata,
         });
 
         unreadCount++;
@@ -652,6 +711,13 @@ async function joinSession(sessionId, triggerBtn) {
             throw new Error("Join request failed");
         }
 
+        // Mark the notification as read via API before removing from list
+        const matchingNotification = notifications.find(n => n.session_id === sessionId);
+        if (matchingNotification && matchingNotification.notification_id) {
+            await markNotificationAsRead(matchingNotification.notification_id);
+        }
+
+        // Remove from local list
         notifications = notifications.filter(
             n => n.session_id !== sessionId
         );
@@ -863,8 +929,10 @@ if (storedAgent) {
         const agent = JSON.parse(storedAgent);
         agentLoginBtn.textContent = "Logout";
         agentLoginBtn.style.background = "#dc3545";
+        notificationBell.style.display = "";
         emitAgentAuthChange();
         connectNotificationSocket(agent.id);
+        fetchUnreadNotifications();
     } catch (err) {
         localStorage.removeItem("support_agent");
         localStorage.removeItem("support_access_token");
@@ -897,9 +965,11 @@ document.getElementById("loginBtn").onclick = async () => {
         alert("Logged in as " + data.agent.name);
         agentLoginBtn.textContent = "Logout";
         agentLoginBtn.style.background = "#dc3545";
+        notificationBell.style.display = "";
 
         emitAgentAuthChange();
         connectNotificationSocket(data.agent.id);
+        fetchUnreadNotifications();
 
     } catch (err) {
         alert("Unable to login.");

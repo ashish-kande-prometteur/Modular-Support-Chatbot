@@ -1,5 +1,6 @@
-from fastapi import WebSocket, WebSocketDisconnect
+from fastapi import WebSocket, WebSocketDisconnect , HTTPException
 from sqlalchemy.orm import Session
+from uuid import UUID
 import asyncio
 from app.models.notification_model import NotificationType
 from app.notifications.notification_manager import notification_manager
@@ -133,3 +134,60 @@ class NotificationService:
             )
         except RuntimeError:
             pass
+
+    def get_unread_notifications(db):
+
+        notifications = NotificationRepository.get_unread_notifications(db)
+
+        return [
+            {
+                "id": n.id,
+                "title": n.title,
+                "message": n.message,
+                "type": n.type,
+                "session_id": n.session_id,
+                "external_user_id": n.external_user_id,
+                "created_at": n.created_at,
+                "metadata": n.metadata_json
+            }
+            for n in notifications
+        ]
+
+
+    @staticmethod
+    def mark_as_read(
+        db: Session,
+        notification_id: UUID
+    ):
+
+        notification = NotificationRepository.get_by_id(
+            db=db,
+            notification_id=notification_id
+        )
+
+        if not notification:
+            raise HTTPException(
+                status_code=404,
+                detail="Notification not found."
+            )
+
+        if notification.is_read:
+            return {
+                "success": True,
+                "message": "Notification already marked as read."
+            }
+
+        NotificationRepository.mark_as_read(
+            db=db,
+            notification=notification
+        )
+
+        return {
+            "success": True,
+            "message": "Notification marked as read.",
+            "notification": {
+                "id": str(notification.id),
+                "is_read": notification.is_read,
+                "read_at": notification.read_at
+            }
+        }

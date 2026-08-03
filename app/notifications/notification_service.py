@@ -2,6 +2,7 @@ from fastapi import WebSocket, WebSocketDisconnect , HTTPException
 from sqlalchemy.orm import Session
 from uuid import UUID
 import asyncio
+from app.models.agent import AgentStatus
 from app.models.notification_model import NotificationType
 from app.notifications.notification_manager import notification_manager
 from app.repositories.agent_repository import AgentRepository
@@ -91,7 +92,20 @@ class NotificationService:
             "metadata": notification.metadata_json,
         }
 
-        NotificationService.broadcast_notification(payload)
+        # Only notify agents whose status is AVAILABLE
+        available_agents = AgentRepository.get_available_agents(db)
+        available_ids = {str(a.id) for a in available_agents}
+
+        try:
+            loop = asyncio.get_running_loop()
+            loop.create_task(
+                notification_manager.broadcast(
+                    payload,
+                    only_agent_ids=available_ids,
+                )
+            )
+        except RuntimeError:
+            pass
 
         return notification
 
@@ -115,7 +129,7 @@ class NotificationService:
     # ---------------------------------------------------------
 
     @staticmethod
-    def broadcast_new_support_request(notification):
+    def broadcast_new_support_request(notification, db: Session = None):
 
         payload = {
             "event": "new_support_request",
@@ -127,10 +141,19 @@ class NotificationService:
             "external_user_id": notification.external_user_id,
         }
 
+        # Only notify agents whose status is AVAILABLE
+        available_ids = None
+        if db is not None:
+            available_agents = AgentRepository.get_available_agents(db)
+            available_ids = {str(a.id) for a in available_agents}
+
         try:
             loop = asyncio.get_running_loop()
             loop.create_task(
-                notification_manager.broadcast(payload)
+                notification_manager.broadcast(
+                    payload,
+                    only_agent_ids=available_ids,
+                )
             )
         except RuntimeError:
             pass

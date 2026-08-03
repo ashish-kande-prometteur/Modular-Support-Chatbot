@@ -62,10 +62,15 @@ class NotificationManager:
     async def broadcast(
         self,
         payload: dict,
+        only_agent_ids: set[str] | None = None,
     ):
         disconnected = []
 
         for agent_id, websocket in self.active_agents.items():
+
+            # Skip agents not in the allowed set (when filtering is enabled)
+            if only_agent_ids is not None and agent_id not in only_agent_ids:
+                continue
 
             try:
 

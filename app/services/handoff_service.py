@@ -48,6 +48,7 @@ class HandoffService:
 
         NotificationService.broadcast_new_support_request(
             notification=notification,
+            db=db,
         )
 
         return {

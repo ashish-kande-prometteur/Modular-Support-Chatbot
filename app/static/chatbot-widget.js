@@ -99,10 +99,10 @@ if (!externalUserId) {
 
   let activeSessionPrompt = null;
 
-  const RESOLUTION_WAIT_MS = 8000;
+  const RESOLUTION_WAIT_MS = 60000;
   // const RESOLUTION_WAIT_MS = 60000;
-  const PRESENCE_WAIT_MS = 8000;
-  const ABANDON_WAIT_MS = 8000;
+  const PRESENCE_WAIT_MS = 60000;
+  const ABANDON_WAIT_MS = 60000;
 
   // ------------------------------------------------------------
   // Shadow DOM host - isolates widget styles from the host page,
@@ -997,7 +997,6 @@ async function submitFeedback(helpful) {
 
       if (answerText) {
           streamMessage(answerText, "bot");
-          appendMessage(answerText, "bot");
           startResolutionTimer();
       }
 

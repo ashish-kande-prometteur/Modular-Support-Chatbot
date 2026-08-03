@@ -25,6 +25,18 @@ class DatabaseService:
             "columns": ["name", "code"],
             "display": "Countries"
         },
+        "states": {
+            "columns": ["name", "code"],
+            "display": "States"
+        },
+        "languages": {
+            "columns": ["name", "code"],
+            "display": "Languages"
+        },
+        "currencies": {
+            "columns": ["name", "code"],
+            "display": "Currencies"
+        },
         "bonus": {
             "columns": [
                 "promotion_title",
@@ -76,7 +88,8 @@ class DatabaseService:
     def list(
         self,
         table: str,
-        limit: int = 100
+        limit: int = 1000,
+        active_only: bool = False
     ) -> Optional[Dict]:
 
         if not self.table_exists(table):
@@ -84,22 +97,26 @@ class DatabaseService:
 
         column = self.TABLES[table]["columns"][0]
 
+        query = f"""
+            SELECT {column}
+            FROM {table}
+        """
+
+        if active_only:
+            query += " WHERE is_active = TRUE"
+
+        query += f"""
+            ORDER BY {column}
+            LIMIT :limit
+        """
+
         db = RAGSessionLocal()
 
         try:
 
             rows = db.execute(
-                text(
-                    f"""
-                    SELECT {column}
-                    FROM {table}
-                    ORDER BY {column}
-                    LIMIT :limit
-                    """
-                ),
-                {
-                    "limit": limit
-                }
+                text(query),
+                {"limit": limit}
             ).fetchall()
 
             return {
@@ -125,7 +142,14 @@ class DatabaseService:
         if not self.table_exists(table):
             return None
 
-        column = self.TABLES[table]["columns"][0]
+        columns = self.TABLES[table]["columns"]
+
+        conditions = [
+            f"LOWER(CAST({col} AS TEXT)) LIKE LOWER(:keyword)"
+            for col in columns
+        ]
+
+        where_clause = " OR ".join(conditions)
 
         db = RAGSessionLocal()
 
@@ -136,8 +160,7 @@ class DatabaseService:
                     f"""
                     SELECT *
                     FROM {table}
-                    WHERE LOWER({column})
-                    LIKE LOWER(:keyword)
+                    WHERE {where_clause}
                     LIMIT 20
                     """
                 ),
@@ -150,7 +173,7 @@ class DatabaseService:
                 "type": "search",
                 "table": table,
                 "display": self.get_display_name(table),
-                "rows": rows
+                "rows": [dict(row) for row in rows]
             }
 
         finally:

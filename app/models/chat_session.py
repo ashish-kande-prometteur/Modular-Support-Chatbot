@@ -17,6 +17,12 @@ from sqlalchemy.orm import relationship
 from app.database.chatbot_db import Base
 
 
+class ResolutionType(str, Enum):
+    AI_RESOLVED = "ai_resolved"
+    HUMAN_RESOLVED = "human_resolved"
+    ABANDONED = "abandoned"
+
+
 class SessionStatus(str, Enum):
     AI_HANDLING = "ai_handling"
     ESCALATED_PENDING = "escalated_pending"
@@ -70,6 +76,31 @@ class ChatSession(Base):
     agent_joined_at = Column(
         DateTime(timezone=True),
         nullable=True,
+    )
+
+    user_confirmed_resolved = Column(
+        Boolean,
+        nullable=False,
+        default=False,
+    )
+
+    user_confirmed_resolved_at = Column(
+        DateTime(timezone=True),
+        nullable=True,
+    )
+
+    user_abandoned_at = Column(
+        DateTime(timezone=True),
+        nullable=True,
+    )
+
+    resolution_type = Column(
+        SqlEnum(
+            ResolutionType,
+            name="resolution_type",
+        ),
+        nullable=True,
+        index=True,
     )
 
     # When conversation was completed

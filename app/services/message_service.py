@@ -23,6 +23,8 @@ class MessageService:
         sender_id: Optional[UUID] = None,
         attachments: Optional[List[Dict[str, Any]]] = None,
         sources: Optional[List[Dict[str, Any]]] = None,
+        response_time_ms: Optional[int] = None,
+        reply_to_message_id: Optional[UUID] = None,
     ) -> ChatMessage:
         """
         Generic message creation.
@@ -37,11 +39,14 @@ class MessageService:
             message=message,
             attachments=attachments,
             sources=sources,
+            response_time_ms=response_time_ms,
+            reply_to_message_id=reply_to_message_id,
         )
 
         self.db.add(chat_message)
         self.db.commit()
         self.db.refresh(chat_message)
+        print("chat_message------------", chat_message)
 
         return chat_message
 
@@ -65,6 +70,8 @@ class MessageService:
         session_id: UUID,
         message: str,
         sources: Optional[List[Dict[str, Any]]] = None,
+        response_time_ms: Optional[int] = None,
+        reply_to_message_id: Optional[UUID] = None,
     ) -> ChatMessage:
         """
         Save an AI response.
@@ -75,6 +82,8 @@ class MessageService:
             sender_type=SenderType.AI,
             message=message,
             sources=sources,
+            response_time_ms=response_time_ms,
+            reply_to_message_id=reply_to_message_id,
         )
 
     def save_agent_message(

@@ -54,6 +54,19 @@ class DatabaseService:
 
         try:
 
+            # TEMP DEBUG
+            current_database = db.execute(
+                text("SELECT current_database()")
+            ).scalar()
+
+            current_schema = db.execute(
+                text("SELECT current_schema()")
+            ).scalar()
+
+            print("RAG DATABASE:", current_database)
+            print("RAG SCHEMA:", current_schema)
+            print("REQUESTED TABLE:", table)
+
             result = db.execute(
                 text(
                     f"""

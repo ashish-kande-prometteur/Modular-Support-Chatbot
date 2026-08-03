@@ -1,8 +1,14 @@
+from datetime import datetime, timezone
 from uuid import UUID
 
 from sqlalchemy.orm import Session
 
-from app.models.chat_session import ChatSession
+from app.models.chat_session import (
+    ChatSession,
+    ResolutionType,
+    SessionStatus,
+)
+
 
 
 class SessionService:
@@ -25,7 +31,8 @@ class SessionService:
             external_user_id=external_user_id,
             widget_source=widget_source,
             metadata_json=metadata_json,
-            status="AI_HANDLING",
+            # status="AI_HANDLING",
+            status=SessionStatus.AI_HANDLING,
         )
 
         self.db.add(session)
@@ -59,7 +66,8 @@ class SessionService:
             self.db.query(ChatSession)
             .filter(
                 ChatSession.external_user_id == external_user_id,
-                ChatSession.status == "AI_HANDLING",
+                # ChatSession.status == "AI_HANDLING",
+                ChatSession.status == SessionStatus.AI_HANDLING
             )
             .order_by(ChatSession.created_at.desc())
             .first()
@@ -75,13 +83,96 @@ class SessionService:
 
         if session:
 
-            session.status = "CLOSED"
+            # session.status = "CLOSED"
+            session.status = SessionStatus.CLOSED
 
             self.db.commit()
 
             self.db.refresh(session)
 
         return session
+
+
+    def confirm_resolution(
+        self,
+        session_id: UUID,
+        external_user_id: str,
+    ):
+        session = self.get_session(session_id)
+
+        if session is None:
+            raise ValueError("Session not found.")
+
+        if session.external_user_id != external_user_id:
+            raise ValueError("This session does not belong to the user."
+        )
+
+
+        if session.status == SessionStatus.CLOSED:
+            raise ValueError("Session is already closed.")
+
+        now = datetime.now(timezone.utc)
+
+        session.user_confirmed_resolved = True
+        session.user_confirmed_resolved_at = now
+
+        if session.status == SessionStatus.AI_HANDLING:
+            session.status = SessionStatus.CLOSED
+            session.resolution_type = ResolutionType.AI_RESOLVED
+            session.closed_at = now
+
+        elif session.status in (
+            SessionStatus.ESCALATED_PENDING,
+            SessionStatus.HUMAN_ACTIVE,
+        ):
+            pass
+
+        self.db.commit()
+        self.db.refresh(session)
+
+        return session
+
+
+
+    def mark_abandoned(
+        self,
+        session_id: UUID,
+        external_user_id: str,
+    ):
+        session = self.get_session(session_id)
+
+        if session is None:
+            raise ValueError("Session not found.")
+
+        if session.external_user_id != external_user_id:
+            raise ValueError(
+                "This session does not belong to the user."
+            )
+
+        if session.status == SessionStatus.CLOSED:
+            raise ValueError("Session is already closed.")
+
+        now = datetime.now(timezone.utc)
+
+        session.user_abandoned_at = now
+
+        if session.status == SessionStatus.AI_HANDLING:
+            session.status = SessionStatus.CLOSED
+            session.resolution_type = ResolutionType.ABANDONED
+            session.closed_at = now
+
+        elif session.status in (
+            SessionStatus.ESCALATED_PENDING,
+            SessionStatus.HUMAN_ACTIVE,
+        ):
+            pass
+
+        self.db.commit()
+        self.db.refresh(session)
+
+        return session
+
+
 
     # ---------------------------------------------------------
     # Get Or Create Session
@@ -104,7 +195,11 @@ class SessionService:
 
             session = self.get_session(session_id)
 
-            if session:
+            # if session:
+            if (
+                session
+                and session.status != SessionStatus.CLOSED
+            ):
                 return session
 
         # -----------------------------------------------------

@@ -9,6 +9,7 @@ from sqlalchemy import (
     JSON,
     Text,
     func,
+    Integer,
 )
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
@@ -96,6 +97,17 @@ class ChatMessage(Base):
     session = relationship(
         "ChatSession",
         back_populates="messages",
+    )
+
+    response_time_ms = Column(
+        Integer,
+        nullable=True,
+    ) 
+
+    reply_to_message_id = Column(
+        UUID(as_uuid=True),
+        ForeignKey("chat_messages.id"),
+        nullable=True,
     )
 
     def __repr__(self):

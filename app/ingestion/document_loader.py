@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import re
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -139,116 +140,90 @@ Answer:
 
 
 def process_betting_rules(data):
-
-    content = data.get(
-        "content",
-        ""
-    )
-
-    paragraphs = content.split(
-        "\n\n"
-    )
-
     chunks = []
 
-    chunk_size = 5
+    pattern = r'(?=^\d+(?:\.\d+)+\.\s+)'
 
-    for i in range(
-        0,
-        len(paragraphs),
-        chunk_size
-    ):
+    chunk_id = 0
 
-        chunk_text = "\n\n".join(
-            paragraphs[
-                i:i + chunk_size
-            ]
-        )
+    for item in data:
 
-        chunks.append(
-            {
-                "source":
-                    "betting_rules",
+        content = item.get("content", "")
 
-                "document":
-                    "ftimerbet_betting_rules",
+        sections = re.split(pattern, content, flags=re.MULTILINE)
 
-                "chunk_id":
-                    i // chunk_size,
+        for section in sections:
+            section = section.strip()
 
-                "content":
-                    chunk_text
-            }
-        )
+            if not section:
+                continue
+
+            chunks.append({
+                "source": item.get("source", "betting_rules"),
+                "document": item.get("document", "ftimerbet_betting_rules"),
+                "chunk_id": chunk_id,
+                "content": section
+            })
+
+            chunk_id += 1
 
     return chunks
-
 
 def process_responsible_gaming(data):
 
     chunks = []
 
-    categories = data.get(
-        "categories",
-        {}
-    )
+    for item in data:
 
-    for category_name, sections in categories.items():
+        chapter = item.get("chapter", {})
+        section = item.get("section", {})
 
-        for section in sections:
+        keywords = "\n".join(
+            item.get("keywords", [])
+        )
 
-            title = section.get(
-                "title",
-                ""
-            )
+        questions = "\n".join(
+            item.get("questions", [])
+        )
 
-            details = section.get(
-                "details",
-                []
-            )
+        chunks.append(
+            {
+                "source": item.get(
+                    "source",
+                    "responsible_gaming"
+                ),
 
-            if isinstance(
-                details,
-                list
-            ):
-                details_text = "\n".join(
-                    details
-                )
-            else:
-                details_text = str(
-                    details
-                )
+                "document": item.get(
+                    "document"
+                ),
 
-            chunks.append(
-                {
-                    "source":
-                        "responsible_gaming",
+                "chunk_id": item.get(
+                    "id"
+                ),
 
-                    "document":
-                        "anjouan_compliance",
+                "content": f"""
+Document:
+{item.get('document')}
 
-                    "category":
-                        category_name,
-
-                    "section":
-                        title,
-
-                    "content":
-                        f"""
-Category:
-{category_name}
+Chapter:
+{chapter.get('number')} - {chapter.get('title')}
 
 Section:
-{title}
+{section.get('number')} - {section.get('title')}
 
-Details:
-{details_text}
+Keywords:
+{keywords}
+
+Possible Questions:
+{questions}
+
+Content:
+{item.get('content')}
 """
-                }
-            )
+            }
+        )
 
     return chunks
-
 
 def process_generic_document(
     data,

@@ -18,6 +18,7 @@ from app.websocket.connection_manager import manager
 from app.services.greeting_service import get_greeting_response
 
 
+import time
 router = APIRouter()
 
 
@@ -48,10 +49,12 @@ async def chat(
     message_service = MessageService(db)
 
     # Store user message
-    message_service.save_user_message(
+    user_message = message_service.save_user_message(
         session_id=session.id,
         message=request.question,
     )
+    print(user_message.id)
+    print(user_message.created_at)
 
     # ----------------------------------------
     # Greeting Handling
@@ -111,16 +114,22 @@ async def chat(
     # --------------------------------------------------------
     # Continue AI pipeline
     # --------------------------------------------------------
-
+    start_time = time.perf_counter()
     answer = get_ai_response(
         db=db,
         session_id=session.id,
-        user_query=request.question,
+        user_query=request.question
     )
-
+    response_time_ms = int(
+    (time.perf_counter() - start_time) * 1000
+    )
+ 
+    print("response_time_ms", response_time_ms) 
     message_service.save_ai_message(
         session_id=session.id,
         message=answer["answer"],
+        response_time_ms=response_time_ms,
+        reply_to_message_id=user_message.id,
     )
 
     return {

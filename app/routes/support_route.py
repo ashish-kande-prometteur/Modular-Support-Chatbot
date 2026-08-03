@@ -5,7 +5,11 @@ from app.database.chatbot_db import get_db
 from app.services.support_service import (
     SupportService,
 )
-from app.schemas.support import JoinSessionRequest , CloseSessionRequest
+from app.schemas.support import JoinSessionRequest , CloseSessionRequest, SessionUserRequest
+from uuid import UUID
+from app.services.session_service import SessionService
+
+
 
 router = APIRouter(
     prefix="/support",
@@ -82,6 +86,75 @@ async def close_session(
 
     except Exception as exc:
 
+        raise HTTPException(
+            status_code=400,
+            detail=str(exc),
+        )
+
+
+@router.post("/session/{session_id}/confirm-resolution")
+def confirm_resolution(
+    session_id: UUID,
+    payload: SessionUserRequest,
+    db: Session = Depends(get_db),
+):
+    try:
+        session = SessionService(db).confirm_resolution(
+            session_id=session_id,
+            external_user_id=payload.external_user_id,
+        )
+
+        return {
+            "success": True,
+            "session_id": str(session.id),
+            "status": session.status.value,
+            "resolution_type": (
+                session.resolution_type.value
+                if session.resolution_type
+                else None
+            ),
+            "user_confirmed_resolved": (
+                session.user_confirmed_resolved
+            ),
+            "user_confirmed_resolved_at": (
+                session.user_confirmed_resolved_at
+            ),
+            "closed_at": session.closed_at,
+        }
+
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=400,
+            detail=str(exc),
+        )
+
+
+@router.post("/session/{session_id}/abandon")
+def abandon_session(
+    session_id: UUID,
+    payload: SessionUserRequest,
+    db: Session = Depends(get_db),
+):
+    try:
+        session = SessionService(db).mark_abandoned(
+            session_id=session_id,
+            external_user_id=payload.external_user_id,
+        )
+
+        return {
+            "success": True,
+            "session_id": str(session.id),
+            "status": session.status.value,
+            "resolution_type": (
+                session.resolution_type.value
+                if session.resolution_type
+                else None
+            ),
+            "user_abandoned_at": session.user_abandoned_at,
+            "closed_at": session.closed_at,
+        }
+
+    except ValueError as exc:
         raise HTTPException(
             status_code=400,
             detail=str(exc),

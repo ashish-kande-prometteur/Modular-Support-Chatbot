@@ -88,6 +88,22 @@ if (!externalUserId) {
     toggleBtn.setAttribute("aria-disabled", agentLoggedIn ? "true" : "false");
   }
 
+
+  // ------------------------------------------------------------
+  // Session resolution / inactivity state
+  // ------------------------------------------------------------
+
+  let resolutionTimer = null;
+  let presenceTimer = null;
+  let abandonTimer = null;
+
+  let activeSessionPrompt = null;
+
+  const RESOLUTION_WAIT_MS = 8000;
+  // const RESOLUTION_WAIT_MS = 60000;
+  const PRESENCE_WAIT_MS = 8000;
+  const ABANDON_WAIT_MS = 8000;
+
   // ------------------------------------------------------------
   // Shadow DOM host - isolates widget styles from the host page,
   // and isolates the host page's styles from the widget.
@@ -229,6 +245,37 @@ if (!externalUserId) {
       font-size: 13px;
     }
     .feedback-row button:hover { background: #f2f2f2; }
+
+    .session-prompt {
+      margin: 8px 0 14px 0;
+      padding: 12px;
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      font-size: 13px;
+    }
+
+    .session-prompt-text {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .session-prompt-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .session-prompt button {
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 8px;
+      padding: 6px 14px;
+      cursor: pointer;
+    }
+
+    .session-prompt button:hover {
+      background: #f2f2f2;
+    }
 
     .chat-input {
       display: flex;
@@ -444,6 +491,236 @@ if (!externalUserId) {
       messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
+  function clearSessionTimers() {
+    if (resolutionTimer) {
+      clearTimeout(resolutionTimer);
+      resolutionTimer = null;
+    }
+
+    if (presenceTimer) {
+      clearTimeout(presenceTimer);
+      presenceTimer = null;
+    }
+
+    if (abandonTimer) {
+      clearTimeout(abandonTimer);
+      abandonTimer = null;
+    }
+  }
+
+  function removeSessionPrompt() {
+  if (activeSessionPrompt) {
+    activeSessionPrompt.remove();
+    activeSessionPrompt = null;
+  }
+  }
+
+  function resetSessionFlow() {
+    clearSessionTimers();
+    removeSessionPrompt();
+  }
+
+
+  function startResolutionTimer() {
+    resetSessionFlow();
+
+    if (!sessionId) {
+      return;
+    }
+
+    resolutionTimer = setTimeout(() => {
+      showResolutionPrompt();
+    }, RESOLUTION_WAIT_MS);
+  }
+
+  function showResolutionPrompt() {
+    resetSessionFlow();
+
+    const prompt = document.createElement("div");
+    prompt.className = "session-prompt";
+
+    prompt.innerHTML = `
+      <div class="session-prompt-text">
+        Did this resolve your issue?
+      </div>
+
+      <div class="session-prompt-actions">
+        <button type="button" class="resolution-yes">
+          Yes
+        </button>
+
+        <button type="button" class="resolution-no">
+          No
+        </button>
+      </div>
+    `;
+
+    activeSessionPrompt = prompt;
+
+    messagesEl.appendChild(prompt);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+
+    const yesButton = prompt.querySelector(".resolution-yes");
+    const noButton = prompt.querySelector(".resolution-no");
+
+    yesButton.addEventListener("click", () => {
+      confirmResolution();
+    });
+
+    noButton.addEventListener("click", () => {
+      handleResolutionNo();
+    });
+
+    presenceTimer = setTimeout(() => {
+      showPresencePrompt();
+    }, PRESENCE_WAIT_MS);
+  }
+
+
+  async function confirmResolution() {
+  resetSessionFlow();
+
+  if (!sessionId) {
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `${config.apiBase}/support/session/${sessionId}/confirm-resolution`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          external_user_id: externalUserId
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        data.detail || "Unable to confirm resolution."
+      );
+    }
+
+    appendMessage(
+      "Thanks. Your resolution has been recorded.",
+      "system"
+    );
+
+  } catch (err) {
+    console.error(
+      "Failed to confirm resolution:",
+      err
+    );
+  }
+}
+
+
+  function handleResolutionNo() {
+    resetSessionFlow();
+
+    appendMessage(
+      "No problem. Please continue and tell us what you still need help with.",
+      "system"
+    );
+
+    input.focus();
+  }
+
+
+  function showPresencePrompt() {
+    resetSessionFlow();
+
+    const prompt = document.createElement("div");
+    prompt.className = "session-prompt";
+
+    prompt.innerHTML = `
+      <div class="session-prompt-text">
+        Are you still there?
+      </div>
+
+      <div class="session-prompt-actions">
+        <button type="button" class="presence-yes">
+          Yes
+        </button>
+      </div>
+    `;
+
+    activeSessionPrompt = prompt;
+
+    messagesEl.appendChild(prompt);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+
+    const yesButton = prompt.querySelector(".presence-yes");
+
+    yesButton.addEventListener("click", () => {
+      handleStillHere();
+    });
+
+    abandonTimer = setTimeout(() => {
+      abandonSession();
+    }, ABANDON_WAIT_MS);
+  }
+
+
+  function handleStillHere() {
+  resetSessionFlow();
+
+  appendMessage(
+    "Thanks. The conversation will remain active.",
+    "system"
+  );
+
+  startResolutionTimer();
+}
+
+  async function abandonSession() {
+    resetSessionFlow();
+
+    if (!sessionId) {
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `${config.apiBase}/support/session/${sessionId}/abandon`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            external_user_id: externalUserId
+          })
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.detail || "Unable to mark session as abandoned."
+        );
+      }
+
+      appendMessage(
+        "This conversation was closed due to inactivity.",
+        "system"
+      );
+
+    } catch (err) {
+      console.error(
+        "Failed to mark session as abandoned:",
+        err
+      );
+    }
+  }
+
+
   function appendFeedbackPrompt(forSessionId) {
     const row = document.createElement("div");
     row.className = "feedback-row";
@@ -561,6 +838,7 @@ async function submitFeedback(helpful) {
     if (data.type === "system") {
 
         if (data.event === "agent_joined") {
+
             agentActive = true;
 
             appendMessage(
@@ -569,6 +847,22 @@ async function submitFeedback(helpful) {
             );
 
             return;
+
+          agentActive = true;
+          appendMessage(
+            data.agent_name
+              ? `${data.agent_name} joined the chat`
+              : "An agent joined the chat",
+            "system"
+          );
+        } else if (data.event === "agent_left") {
+          agentActive = false;
+
+          appendMessage(
+            "The agent left. You're back to chatting with our AI.",
+            "system"
+          );
+
         }
 
         if (data.event === "feedback_required") {
@@ -593,21 +887,32 @@ async function submitFeedback(helpful) {
         }
     }
 
-      // Don't re-render our own outgoing message if the backend echoes it.
-      if (data.sender === "user") return;
+      // Don't display the user's own WebSocket message again.
+      if (data.sender === "user") {
+        return;
+      }
 
       if (data.sender === "agent") {
-    appendMessage(
-        data.text,
-        "agent",
-        data.agent_name
-    );
-} else {
-    appendMessage(
-        data.text,
-        "bot"
-    );
-}
+
+        appendMessage(
+          data.text,
+          "agent",
+          data.agent_name
+        );
+
+        // Start resolution flow after agent response.
+        startResolutionTimer();
+
+      } else {
+
+        appendMessage(
+          data.text,
+          "bot"
+        );
+
+        // Start resolution flow after bot response.
+        startResolutionTimer();
+      }
     };
 
     liveSocket.onclose = () => {
@@ -624,6 +929,7 @@ async function submitFeedback(helpful) {
 
     const question = input.value.trim();
     if (!question) return;
+    resetSessionFlow();
 
     appendMessage(question, "user");
     input.value = "";
@@ -691,6 +997,8 @@ async function submitFeedback(helpful) {
 
       if (answerText) {
           streamMessage(answerText, "bot");
+          appendMessage(answerText, "bot");
+          startResolutionTimer();
       }
 
       if (data.show_feedback) {

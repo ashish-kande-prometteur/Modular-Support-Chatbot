@@ -8,3 +8,6 @@ class JoinSessionRequest(BaseModel):
 class CloseSessionRequest(BaseModel):
     agent_id: UUID
     resolution_note: str | None = None
+
+class SessionUserRequest(BaseModel):
+    external_user_id: str

@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
+from app.routes.insights_route import router as insights_router
 from app.routes.chat import router as chat_router
 from app.routes.raise_ticket import router as raise_ticket_router
 from app.routes.support_route import router as support_route
@@ -53,6 +54,11 @@ app.mount(
 app.include_router(
     chat_router,
     prefix="/api",
+)
+
+app.include_router(
+    insights_router,
+    prefix="/admin",
 )
 
 app.include_router(

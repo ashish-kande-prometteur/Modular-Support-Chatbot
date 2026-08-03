@@ -2,6 +2,10 @@ from app.repositories.support_repository import (
     SupportRepository,
 )
 from app.models.chat_session import SessionStatus
+from app.models.chat_session import (
+    ResolutionType,
+    SessionStatus,
+)
 from app.repositories.agent_repository import AgentRepository
 from app.services.message_service import MessageService
 from app.websocket.connection_manager import manager
@@ -157,6 +161,7 @@ class SupportService:
         SupportRepository.close_session(
             session=session,
         )
+        session.resolution_type = ResolutionType.HUMAN_RESOLVED
 
         # -----------------------------------
         # Mark Agent Available

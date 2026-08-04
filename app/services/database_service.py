@@ -103,29 +103,42 @@ class DatabaseService:
         table: str,
         limit: int = 1000,
         active_only: bool = False
-    ) -> Optional[Dict]:
+    ):
 
         if not self.table_exists(table):
             return None
 
-        column = self.TABLES[table]["columns"][0]
-
-        query = f"""
-            SELECT {column}
-            FROM {table}
-        """
-
-        if active_only:
-            query += " WHERE is_active = TRUE"
-
-        query += f"""
-            ORDER BY {column}
-            LIMIT :limit
-        """
-
         db = RAGSessionLocal()
 
         try:
+
+            if table == "casino_providers":
+
+                query = """
+                    SELECT
+                        name->>'EN' AS name
+                    FROM casino_providers
+                    WHERE is_active = TRUE
+                    ORDER BY name->>'EN'
+                    LIMIT :limit
+                """
+
+            else:
+
+                column = self.TABLES[table]["columns"][0]
+
+                query = f"""
+                    SELECT {column}
+                    FROM {table}
+                """
+
+                if active_only:
+                    query += " WHERE is_active = TRUE"
+
+                query += f"""
+                    ORDER BY {column}
+                    LIMIT :limit
+                """
 
             rows = db.execute(
                 text(query),

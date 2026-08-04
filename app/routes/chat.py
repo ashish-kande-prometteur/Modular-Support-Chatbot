@@ -8,6 +8,7 @@ from ..database.chatbot_db import get_db
 from app.services.chat_service import (
     get_ai_response
 )
+from app.services.context_resolver import resolve_query
 from app.services.session_service import (
     SessionService
 )
@@ -77,20 +78,17 @@ async def chat(
             "show_feedback": False,
         }
 
-    # -----------------------------
-    # TEST Conversation Memory
-    # -----------------------------
-    # conversation_service = ConversationService(db)
-
-    # history = conversation_service.format_for_llm(
-    #     session_id=session.id,
-    #     limit=10
-    # )
-
-    # print("\n========== Conversation History ==========")
-    # for msg in history:
-    #     print(msg)
-    # print("==========================================\n")
+    # -----------------------------------------
+    # Resolve follow-up context before AI search
+    # The raw question is already saved to DB above.
+    # resolved_query is what gets sent to the vector
+    # search / RAG pipeline.
+    # -----------------------------------------
+    resolved_query = resolve_query(
+        db=db,
+        session_id=session.id,
+        user_query=request.question,
+    )
 
     # Existing AI pipeline
     if session.status == SessionStatus.HUMAN_ACTIVE:
@@ -118,7 +116,7 @@ async def chat(
     answer = get_ai_response(
         db=db,
         session_id=session.id,
-        user_query=request.question
+        user_query=resolved_query
     )
     response_time_ms = int(
     (time.perf_counter() - start_time) * 1000
